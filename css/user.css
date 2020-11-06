@@ -323,4 +323,8 @@ i {
   font-size: 24px;
   color: #ffffff;
 }
+
+.btn-download:hover {
+  background: #D0853F;
+}
 /*# sourceMappingURL=user.css.map */
