@@ -228,7 +228,7 @@ body {
   padding-left: 0px;
 }
 
-.content-order .card-order i {
+i {
   margin-right: 15px;
 }
 
@@ -280,6 +280,46 @@ body {
 .join-card p {
   font-style: normal;
   font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.content-hasil {
+  margin-top: 165px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.content-hasil .card-hasil {
+  border: 2px solid #C4C4C4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.content-hasil h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.content-hasil p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.btn-download {
+  width: 200px;
+  height: 54px;
+  background: #FE993B;
+  border-radius: 20px;
+}
+
+.btn-download p {
+  font-style: normal;
+  font-weight: 500;
   font-size: 24px;
   color: #ffffff;
 }
