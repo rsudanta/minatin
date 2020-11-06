@@ -28,7 +28,7 @@ body {
 
 .sidenav button {
   padding-left: 75px;
-  bottom: 70px;
+  bottom: 10px;
   text-decoration: none;
   font-style: normal;
   font-weight: normal;
@@ -98,15 +98,21 @@ body {
 }
 
 .judul-page p {
-  padding-top: 8px;
   padding-left: 30px;
+}
+
+.judul-page a {
+  color: inherit;
+  text-decoration: none;
+  padding-top: 8px;
+  font-size: 24px;
+  font-weight: normal;
 }
 
 .bread-nav {
   font-style: normal;
-  font-weight: bold;
+  font-weight: bold !important;
   font-size: 24px;
-  line-height: 28px;
 }
 
 .title {
@@ -115,25 +121,24 @@ body {
   font-size: 48px;
 }
 
-.content {
+.content-home {
   margin-top: 165px;
   margin-left: 30px;
 }
 
-.content h1 {
+.content-home h1 {
   padding-bottom: 24px;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  line-height: 28px;
 }
 
-.content a {
+.content-home a {
   text-decoration: none;
   color: inherit;
 }
 
-.content a .card {
+.content-home a .card-psikotest {
   width: 460px;
   padding: 30px 30px 14px 30px;
   background: #FFFFFF;
@@ -145,11 +150,11 @@ body {
   border-radius: 10px;
 }
 
-.content a .card .rounded-circle {
+.content-home a .card-psikotest .rounded-circle {
   height: 80px;
 }
 
-.content a .card h2 {
+.content-home a .card-psikotest h2 {
   width: 300px;
   white-space: nowrap;
   overflow: hidden;
@@ -157,10 +162,9 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
 }
 
-.content a .card p {
+.content-home a .card-psikotest p {
   width: 300px;
   white-space: nowrap;
   overflow: hidden;
@@ -168,14 +172,115 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 21px;
 }
 
-.content a .card .star {
+.content-home a .card-psikotest .star {
   padding-left: 0px;
 }
 
-.content a .card i {
+.content-home a .card-psikotest i {
   margin-right: 15px;
+}
+
+.content-order {
+  margin-top: 165px;
+  margin-left: 30px;
+}
+
+.content-order .card-order {
+  width: 460px;
+  height: 140px;
+  padding: 30px 30px 14px 30px;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.content-order .card-order .rounded-circle {
+  height: 80px;
+}
+
+.content-order .card-order h2 {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.content-order .card-order p {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.content-order .card-order .star {
+  padding-left: 0px;
+}
+
+.content-order .card-order i {
+  margin-right: 15px;
+}
+
+.pending {
+  padding-top: 24px;
+}
+
+.paid {
+  padding-top: 70px;
+}
+
+.finish {
+  padding-top: 70px;
+  margin-bottom: 100px;
+}
+
+.h1-content {
+  padding-bottom: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.btn-card {
+  background: #FE993B;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  width: 460px;
+  height: 56px;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-card:hover {
+  background: #D0853F;
+}
+
+.join-card {
+  margin-top: -8px;
+}
+
+.join-card p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
 }
 /*# sourceMappingURL=user.css.map */
