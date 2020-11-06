@@ -1,0 +1,181 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 327px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-right: 1px solid #c4c4c4;
+}
+
+.sidenav a {
+  padding-left: 75px;
+  padding-top: 32px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #c4c4c4;
+  display: block;
+}
+
+.sidenav button {
+  padding-left: 75px;
+  bottom: 70px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #c4c4c4;
+  display: block;
+  position: absolute;
+}
+
+.sidenav .rounded-circle {
+  height: 150px;
+}
+
+.sidenav h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  padding-top: 24px;
+}
+
+.sidenav .navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  padding-left: 75px;
+}
+
+.sidenav i {
+  margin-right: 15px;
+}
+
+.sidenav a:hover {
+  color: #D0853F;
+}
+
+.sidenav button:hover {
+  color: red;
+}
+
+.main {
+  margin-left: 327px;
+  /* Same as the width of the sidenav */
+  font-size: 28px;
+  /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.active {
+  color: #FE993B !important;
+  font-weight: 700 !important;
+}
+
+.fixed-top {
+  margin-left: 327px !important;
+}
+
+.judul-page {
+  height: 141px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #c4c4c4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.judul-page h1 {
+  padding-top: 25px;
+  padding-left: 30px;
+}
+
+.judul-page p {
+  padding-top: 8px;
+  padding-left: 30px;
+}
+
+.bread-nav {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.content {
+  margin-top: 165px;
+  margin-left: 30px;
+}
+
+.content h1 {
+  padding-bottom: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content a .card {
+  width: 460px;
+  padding: 30px 30px 14px 30px;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.content a .card .rounded-circle {
+  height: 80px;
+}
+
+.content a .card h2 {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.content a .card p {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.content a .card .star {
+  padding-left: 0px;
+}
+
+.content a .card i {
+  margin-right: 15px;
+}
+/*# sourceMappingURL=user.css.map */
