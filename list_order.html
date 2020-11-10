@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daftar Pesanan</title>
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -21,8 +21,8 @@
         </div>
         <img class="mx-auto d-block rounded-circle" src="img/Profile.png" alt="">
         <h2 class="text-center">Floyd Miles</h2>
-        <a href="#about" class="active"><i class="fas fa-home"></i>Home</a>
-        <a href="#services"><i class="fas fa-shopping-cart"></i>Order</a>
+        <a href="#about"><i class="fas fa-home"></i>Home</a>
+        <a href="#services" class="active"><i class="fas fa-shopping-cart"></i>Order</a>
         <a href="#contact"><i class="fas fa-user-alt"></i>Profile</a>
         <button class="btn"><i class="fas fa-sign-out-alt"></i>Logout</button>
     </div>
@@ -33,42 +33,49 @@
         <!--Header-->
         <div class="fixed-top judul-page">
             <h1 class="title">
-                Home
+                Order
             </h1>
             <p> <a href="#" class="bread-nav">
-                    Home
+                    Order
                 </a>
             </p>
 
         </div>
         <!--End Header-->
-        <div class="content-home">
-            <h1>POPULAR PSIKOTEST</h1>
+        <div class="content-order">
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <a href="">
-                        <div class="card-psikotest">
-                            <div class="row">
-                                <div class="col-3">
-                                    <img src="img/profile.png" class="rounded-circle" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Psikotest Minat dan Bakat</h2>
-                                    <p>Ronald Richards</p>
-                                </div>
-                            </div>      
+                        <div class="card-pemesan text-center">
+                            <img src="img/profile.png" alt="" class="rounded-circle img-pemesan">
+                            <div class="nama-pemesan">Vania</div>
+                            <div class="order-id">Order ID #00011012</div>
                             <hr>
-                            <div class="row">
-                                <div class="col-3">
-                                    <p class="star"><i class="fas fa-star"></i>4.7</p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="star"><i class="fas fa-business-time"></i> 4 tahun</p>
-                                </div>
-                            </div>
+                            <button class="status-nilai sudah" disabled>Lihat Hasil</button>
                         </div>
                     </a>
-
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <div class="card-pemesan text-center">
+                            <img src="img/profile.png" alt="" class="rounded-circle img-pemesan">
+                            <div class="nama-pemesan">Danta</div>
+                            <div class="order-id">Order ID #00011013</div>
+                            <hr>
+                            <button class="status-nilai belum" disabled>Belum Dinilai</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <div class="card-pemesan text-center">
+                            <img src="img/profile.png" alt="" class="rounded-circle img-pemesan">
+                            <div class="nama-pemesan">Vania</div>
+                            <div class="order-id">Order ID #00011014</div>
+                            <hr>
+                            <button class="status-nilai sudah" disabled>Lihat Hasil</button>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

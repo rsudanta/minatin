@@ -39,10 +39,13 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .modal-footer p a {
   color: #FE993B;
 }
 
+=======
+>>>>>>> 144597de0fb0ad55727d0195491e06c15ca0bfd9
 section {
   padding-top: 70px;
 }
@@ -185,7 +188,11 @@ section {
 }
 
 .section-testimoni .card-img {
+<<<<<<< HEAD
   background: linear-gradient(179.91deg, rgba(255, 255, 255, 0) 0.07%, #000000 92.71%), url("/img/work.png") no-repeat;
+=======
+  background: linear-gradient(179.91deg, rgba(255, 255, 255, 0) 0.07%, #000000 92.71%), url("/img/testi.png") no-repeat;
+>>>>>>> 144597de0fb0ad55727d0195491e06c15ca0bfd9
   background-size: contain;
   border-radius: 27px;
   width: 181px;
