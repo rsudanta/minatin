@@ -2,183 +2,275 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Minatin!</title>
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/newlandingpage.css">
 
-
 </head>
 
-<body class="bodyLP">
+<body>
     <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"><img class="logoLP" src="img/Logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><p>Beranda</p></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><p>Tentang Kami</p></a>
-            </li>
-          </ul>
-          <div class="navbar-text">
-            <a href="" class="btn btn-minatin">
-                <p>Daftar</p>
-            </a>
-            <a href="" class="btn btn-minatin">
-                <p>Masuk</p>
-            </a>
-        </div>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img class="logoLP" src="img/Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <p>Beranda</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <p>Tentang Kami</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-nav ml-auto">
+                    <button class="btn btn-minatin mr-2" data-toggle="modal" data-target="#exampleModal">
+                        <p>Daftar</p>
+                    </button>
+                    <button class="btn btn-minatin" data-toggle="modal" data-target="#exampleModal">
+                        <p>Masuk</p>
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Send message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
     </div>
     <!--baru neh-->
-    <div class="container">
-        <div class="topcontentLP">
-            <h1 class="titleTopContentLP">MINATIN, helps you choose your future!</h1>
-            <p class="textTopContentLP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quasi eum ipsum iure corporis voluptas. Facere ipsa deleniti atque consectetur et velit necessitatibus doloremque? Quisquam soluta amet atque ipsum tenetur?</p>
+    <section class="section-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <h1 class="title">MINATIN, helps you <span class="title orange">choose your future!</span>
+                    </h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quasi eum ipsum iure corporis voluptas. Facere ipsa deleniti atque consectetur et velit necessitatibus doloremque? Quisquam soluta amet atque ipsum tenetur?</p>
+                    <a href="" class="mt-4 btn btn-minatin">
+                        <p>Get Started</p>
+                    </a>
+                </div>
+                <div class="col-5">
+                    <img src="img/success.png" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <a href="" class="btn btn-getstarted">
-                <p>Get Started</p>
-            </a>
-        </div>
-        <img class="imgTopContentLP" src="img/success.png" alt="">
-    </div>
+    </section>
 
     <!--END TopContent-->
 
-
-    <h1 class="titleOurServices">Our Services</h1>
-    <div class="cardLP1">
-        <img class="cardimgLP1" src="img/consul.jpg" alt="">
-        <h2>
-            Professional Consultant
-        </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet urna, parturient velit ultrices integer a. </p>
-    </div>
-
-    <div class="cardLP2">
-        <img class="cardimgLP2" src="img/consul.jpg" alt="">
-        <h2>
-            Professional Consultant
-        </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet urna, parturient velit ultrices integer a. </p>
-    </div>
-
-    <div class="cardLP3">
-        <img class="cardimgLP3" src="img/consul.jpg" alt="">
-        <h2>
-           Professional Consultant
-        </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet urna, parturient velit ultrices integer a. </p>
-    </div>
+    <section class="section-service">
+        <div class="container">
+            <h1 class="title text-center">Our Services</h1>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <img src="img/consul.jpg" alt="">
+                        <h2>
+                            Professional Consultant
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet urna, parturient velit ultrices integer a.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="img/consul.jpg" alt="">
+                        <h2>
+                            Professional Consultant
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet urna, parturient velit ultrices integer a.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="img/consul.jpg" alt="">
+                        <h2>
+                            Professional Consultant
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et amet urna, parturient velit ultrices integer a.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--END CardTopContent-->
 
-    <div class="middlecontentLP">
-        <!--img class="image-midcont" src="img/stressedout.jpg" alt=""-->
-        <h1 class="lefttext-midcont">85%</h1>
-        <h1 class="lefttext2-midcont">Salah Kerjaan</h1>
-        <div class="middlecontentLP2">
+    <section class="section-mid">
+        <div class="container-fluids">
+            <img src="img/Mid.png" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 text-left">
+                        <h1 class="title white">85%</h1>
+                        <h1 class="text white">Salah Kerjaan</h1>
+                    </div>
+                    <div class="col-5 text-mid">
+                        <h1 class="title white">JANGAN SAMPAI SALAH JURUSAN</h1>
+                        <p class="text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in
+                        </p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <h1 class="title white">91%</h1>
+                        <h1 class="text white">Salah Jurusan</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h1 class="centertext-midcont">JANGAN SAMPAI SALAH JURUSAN</h1>
-        <p class="centertext2-midcont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in</p>
-        <!--img class="image2-midcont" src="img/stressedout.jpg" alt=""-->
-        <h1 class="righttext-midcont">91%</h1>
-        <h1 class="righttext2-midcont">Salah Jurusan</h1>
-    </div>
+    </section>
     <!--END MiddleContent-->
 
-    <img class="image-midcontLP" src="img/stressedout1.png" alt="">
-    <div class="text-midcontLP">
-        <h2>Get your skill improve faster, with confident</h2>
+    <section class="section-proof">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="img-1" src="img/stressedout.jpg " alt=" ">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-2" src="img/stressedout2.png " alt=" ">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="img-3" src="img/stressedout3.jpg " alt=" ">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-4" src="img/stressedout1.png " alt=" ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h2 class="text bold">Get your <span class="orange">skill improve faster</span>, with confident</h2>
 
-        <h4>Payment protection, guaranteed</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in</p>
+                    <h4 class="caption bold">Payment protection, guaranteed</h4>
+                    <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in</p>
 
-        <h4>Know the price up front</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in</p>
+                    <h4 class="caption bold">Know the price up front</h4>
+                    <p class="caption"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in</p>
 
-        <h4>We’re here for you 24/7</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in</p>
-    </div>
+                    <h4 class="caption bold">We’re here for you 24/7</h4>
+                    <p class="caption ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem in</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--END TextMiddleContent-->
-
-    <h1 class="textTestimoni">Testimoni</h1>
-    <div class="cardLP4">
-        <div class="boxorg-cardLP4"></div>
-        <img class="cardimgLP4" src="img/work.png" alt="">
-        <h2>John</h2>
-        <p class="professionLP4">Siswa</p>
-        <div class="boxblc-cardLP4"></div>
-        <p class="text-testi1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis sodales placerat cras eget faucibus elementum pellentesque proin.</p>
-    </div>
-
-    <div class="cardLP5">
-        <div class="boxorg-cardLP5"></div>
-        <img class="cardimgLP5" src="img/work.png" alt="">
-        <h2>Vincent</h2>
-        <p class="professionLP5">Siswa</p>
-        <div class="boxblc-cardLP5"></div>
-        <p class="text-testi2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis sodales placerat cras eget faucibus elementum pellentesque proin.</p>
-    </div>
-
-    <div class="cardLP6">
-        <div class="boxorg-cardLP6"></div>
-        <img class="cardimgLP6" src="img/work.png" alt="">
-        <h2>Desta</h2>
-        <p class="professionLP6">Siswa</p>
-        <div class="boxblc-cardLP6"></div>
-        <p class="text-testi3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis sodales placerat cras eget faucibus elementum pellentesque proin.</p>
-    </div>
-     <!--END TestimoniContent-->
+    <section class="section-testimoni">
+        <div class="container">
+            <h1 class="title text-center">Testimoni</h1>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-bg"></div>
+                    <div class="card-img">
+                        <h2>John</h2>
+                        <p>Siswa</p>
+                    </div>
+                    <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis sodales placerat cras eget faucibus elementum pellentesque proin.</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-bg"></div>
+                    <div class="card-img">
+                        <h2>John</h2>
+                        <p>Siswa</p>
+                    </div>
+                    <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis sodales placerat cras eget faucibus elementum pellentesque proin.</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card-bg"></div>
+                    <div class="card-img">
+                        <h2>John</h2>
+                        <p>Siswa</p>
+                    </div>
+                    <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis sodales placerat cras eget faucibus elementum pellentesque proin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END TestimoniContent-->
 </body>
 
-<footer>
-    <div class="footerLP">
-        <div class="line-footerLP"></div> 
-        <h1 class="mText-footerLP">M</h1>
-        <h2 class ="inaText-footerLP" >ina</h2>
-        <h2 class ="tinText-footerLP">tin.</h2>
-        <p class="bottom-minatintextLP">We grant your wishes instantly</p>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <h1>Minatin</h1>
+                <p>We grant your wishes instantly</p>
+            </div>
 
-        <div class="forbeginners-sec">
-            <h5>For Beginners</h5>
-            <p>New Account</p>
-            <p>Booking Now</p>
-            <p>Use Payments</p>
+            <div class="col-2">
+                <h5>For Beginners</h5>
+                <a href="">New Account</a> <br>
+                <a href="">Booking Now</a><br>
+                <a href="">Use Payments</a>
+            </div>
+
+            <div class="col-2">
+                <h5>Explore Us</h5>
+                <a href="">Our Careers</a><br>
+                <a href="">Privacy</a><br>
+                <a href="">Terms & Conditions</a>
+            </div>
+
+            <div class="col-2">
+                <h5>Connect Us</h5>
+                <a href="">support@minatin.id</a><br>
+                <a href="">022 - 5673 - 431</a><br>
+                <a href="">Staycation, Kuningan Jakarta</a>
+            </div>
         </div>
-
-        <div class="exploreus-sec">
-            <h5>Explore Us</h5>
-            <p>Our Careers</p>
-            <p>Privacy</p>
-            <p>Terms & Conditions</p>
-        </div>
-
-        <div class="connectus-sec">
-            <h5>Connect Us</h5>
-            <p>support@minatin.id</p>
-            <p>022 - 5673 - 431</p>
-            <p>Staycation, Kuningan Jakarta</p>
-        </div>
-
-        <div class="copyrightLP">
+        <div class="text-center mb-3">
             <p>Copyright 2020 • All right reserved • Minatin</p>
         </div>
     </div>
     <!-- jQuery and JS bundle w/ Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous ">
     </script>
-    <script src="https://kit.fontawesome.com/9923874ec2.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9923874ec2.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous ">
     </script>
 </footer>
 

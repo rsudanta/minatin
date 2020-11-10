@@ -1,12 +1,20 @@
+html {
+  overflow-x: hidden;
+}
+
+html p {
+  margin-bottom: 0px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
 
-.navbar .nav-link {
+.navbar .nav-item {
   margin-left: 30px;
 }
 
-.navbar .nav-link p {
+.navbar .nav-item p {
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -19,7 +27,6 @@ body {
 
 .btn-minatin {
   min-width: 150px;
-  min-height: 50px;
   background: #FE993B;
   border-radius: 20px;
 }
@@ -28,6 +35,212 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  color: #FFFFFF !important;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+section {
+  padding-top: 70px;
+}
+
+.section-top img {
+  width: 440px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  color: #000000;
+}
+
+.orange {
+  color: #FE993B !important;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  color: #000000;
+}
+
+.section-service .card {
+  background: #FFFFFF;
+  border: 2px solid #C4C4C4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 24px 24px;
+}
+
+.section-service img {
+  min-height: 200px;
+  max-width: 350px;
+}
+
+.section-service h2 {
+  padding-top: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.section-service p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.section-mid .container-fluids {
+  position: relative;
+}
+
+.section-mid img {
+  width: 100%;
+}
+
+.section-mid .text-left {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 2;
+  text-align: center;
+}
+
+.section-mid .text-mid {
+  position: absolute;
+  top: 35%;
+  right: 30%;
+  z-index: 2;
+  text-align: center;
+}
+
+.section-mid .text-right {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  z-index: 2;
+  text-align: center;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.section-proof img {
+  width: 360px;
+  height: 232px;
+  border: 2px solid #C4C4C4;
+  margin-bottom: 12px !important;
+}
+
+.section-proof .img-1 {
+  border-radius: 40px 0px 0px 0px;
+}
+
+.section-proof .img-2 {
+  border-radius: 0px 40px 0px 0px;
+}
+
+.section-proof .img-3 {
+  border-radius: 0px 0px 0px 40px;
+}
+
+.section-proof .img-4 {
+  border-radius: 0px 0px 40px 0px;
+}
+
+.section-proof h4 {
+  padding-top: 12px;
+}
+
+.bold {
+  font-weight: 500 !important;
+}
+
+.caption {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.section-testimoni {
+  margin-bottom: 100px;
+}
+
+.section-testimoni .card-bg {
+  position: absolute;
+  width: 274px;
+  height: 463px;
+  background: #FE993B;
+  border-radius: 19px;
+  margin-left: 40px;
+}
+
+.section-testimoni .card-img {
+  background: linear-gradient(179.91deg, rgba(255, 255, 255, 0) 0.07%, #000000 92.71%), url("/img/testi.png") no-repeat;
+  background-size: contain;
+  border-radius: 27px;
+  width: 181px;
+  height: 256px;
+  position: relative;
+  top: 10%;
+}
+
+.section-testimoni .card-img h2 {
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  color: white;
+}
+
+.section-testimoni .card-img p {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-weight: 300;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+.section-testimoni .card-text {
+  position: relative;
+  width: 319px;
+  height: 154px;
+  background: #000000;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: -74px;
+}
+
+.section-testimoni .card-text p {
+  padding: 12px 12px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.footer {
+  border-top: 1px solid #c4c4c4;
+}
+
+.footer .row {
+  padding: 40px 0px;
+}
+
+.footer h5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
 }
 /*# sourceMappingURL=newlandingpage.css.map */
