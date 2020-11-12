@@ -327,6 +327,7 @@ i {
     background: #D0853F;
 }
 
+<<<<<<< HEAD
 .content-detailsoal {
   margin-top: 165px;
   margin-left: 30px;
@@ -468,6 +469,7 @@ i {
 .btn-submitsoal:hover {
   background: #D0853F;
 }
+=======
 .card-pemesan {
     width: 318px;
     height: 355px;
@@ -636,4 +638,5 @@ input.form-control {
 }
 
 
+>>>>>>> 0a47667cb00fc29f6fa5133e47273e1cbb845d93
 /*# sourceMappingURL=user.css.map */
