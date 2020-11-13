@@ -16,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PsikologController;
+use App\Http\Controllers\OrderController;
 
-Route::get('/', [HomeController::class, 'index'])->name('user_home');
-Route::get('/order', [HomeController::class, 'order'])->name('user_order');
+Route::group(['middleware' => 'active'], function() {
+    Route::get('/', [HomeController::class, 'index'])->name('user_home');
+    Route::get('/order', [OrderController::class, 'index'])->name('user_order');
+});
+
 Route::get('/list_order', [PsikologController::class, 'list_order'])->name('list_order');
 Route::get('/detail_pemesan', [PsikologController::class, 'detail_pemesan'])->name('detail_pemesan');
 Route::get('/input_hasil', [PsikologController::class, 'input_hasil'])->name('input_hasil');
