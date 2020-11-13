@@ -29,6 +29,12 @@ class ActiveBtn
             case(strstr($route, '/order')) :
                 $active['order'] = 'active';
                 break;
+            case(strstr($route, '/list_order')) :
+                $active['order'] = 'active';
+                break;
+            case(strstr($route, '/edit_profile')) :
+                $active['profile'] = 'active';
+                break;
             default:
                 $active['home'] = 'active';
         }
