@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::group(['middleware' => 'active'], function () {
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('user_home');
-Route::get('/order', 'App\Http\Controllers\HomeController@order')->name('user_order');
-
+Route::get('/order', 'App\Http\Controllers\OrderController@index')->name('user_order');
+});
