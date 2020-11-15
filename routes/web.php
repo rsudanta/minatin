@@ -17,10 +17,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PsikologController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\EditProfileController;
 
 Route::group(['middleware' => 'active'], function() {
     Route::get('/', [HomeController::class, 'index'])->name('user_home');
     Route::get('/order', [OrderController::class, 'index'])->name('user_order');
+    Route::get('/user_edit-profile', [EditProfileController::class, 'editprofile'])->name('user_edit-profile');
     Route::get('/list_order', [PsikologController::class, 'list_order'])->name('list_order');
     Route::get('/edit_profile', [PsikologController::class, 'edit_profile'])->name('edit_profile');
 });

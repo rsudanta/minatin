@@ -12,4 +12,7 @@ class HomeController extends Controller
     function order(){
         return view('pages.user.order');
     }
+    function editprofile(){
+        return view('pages.user.user_edit-profile');
+    }
 }

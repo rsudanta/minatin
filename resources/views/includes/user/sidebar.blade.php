@@ -9,6 +9,6 @@
     <h2 class="text-center">Floyd Miles</h2>
     <a href="{{ route('user_home') }}" class="{{$active['home']}}"><i class="fas fa-home"></i>Home</a>
     <a href="{{ route('user_order') }}" class="{{$active['order']}}"><i class="fas fa-shopping-cart"></i>Order</a>
-    <a href="#contact" class="{{$active['profile']}}"><i class="fas fa-user-alt"></i>Profile</a>
+    <a href="{{ route('user_edit-profile') }}" class="{{$active['profile']}}"><i class="fas fa-user-alt"></i>Profile</a>
     <button class="btn"><i class="fas fa-sign-out-alt"></i>Logout</button>
 </div>
