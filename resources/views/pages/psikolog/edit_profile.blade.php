@@ -27,18 +27,32 @@ Edit Profile
         <div class="container-input-hasil">
             <form class="form-input-hasil">
                 <div class="form-group">
-                    <label for="namaLengkap">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="namaLengkap" placeholder="Nama Lengkap">
+                    <label for="namaPenyelenggara">Nama Penyelenggara</label>
+                    <input type="text" class="form-control" id="namaPenyelenggara" placeholder="Nama Penyelenggara">
                 </div>
                 <div class="form-group">
-                    <label for="tglLahir">Tanggal Lahir</label>
-                    <input type="text" class="form-control" id="tglLahir" placeholder="Tanggal Lahir">
+                    <label for="namaPsikolog">Nama Psikolog</label>
+                    <input type="text" class="form-control" id="namaPsikolog" placeholder="Nama Psikolog">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="bidangPsikolog">Bidang Psikolog</label>
+                      <input type="text" class="form-control" id="bidangPsikolog4" placeholder="Bidang Psikolog">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lamaKerja">Lama Kerja</label>
+                        <input type="number" class="form-control" id="lamaKerja" placeholder="Lama Kerja">    
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="jurusanIngin">Jurusan yang diinginkan</label>
-                    <input type="text" class="form-control" id="jurusanIngin" placeholder="Jurusan yang diinginkan">
+                    <label for="edukasi">Riwayat Edukasi</label>
+                    <input type="text" class="form-control" id="edukasi" placeholder="Riwayat Edukasi">
                 </div>
-                <button type="submit" class="btn btn-periksa">Submit</button>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea class="form-control" id="deskripsi" rows="3" placeholder="Deskripsi"></textarea>
+                </div>
+                <button type="submit" class="btn btn-buat">Simpan</button>
             </form>
         </div>
     </div>

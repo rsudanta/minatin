@@ -23,12 +23,19 @@ Route::group(['middleware' => 'active'], function() {
     Route::get('/', [HomeController::class, 'index'])->name('user_home');
     Route::get('/order', [OrderController::class, 'index'])->name('user_order');
     Route::get('/user_edit-profile', [EditProfileController::class, 'editprofile'])->name('user_edit-profile');
-    Route::get('/list_order', [PsikologController::class, 'list_order'])->name('list_order');
-    Route::get('/edit_profile', [PsikologController::class, 'edit_profile'])->name('edit_profile');
 });
 
-Route::get('/detail_pemesan', [PsikologController::class, 'detail_pemesan'])->name('detail_pemesan');
-Route::get('/input_hasil', [PsikologController::class, 'input_hasil'])->name('input_hasil');
+Route::prefix('psikolog')
+-> middleware(['active'])
+-> group( function() {
+    Route::get('/list_order', [PsikologController::class, 'list_order'])->name('list_order');
+    Route::get('/profile_psikolog', [PsikologController::class, 'profile_psikolog'])->name('profile_psikolog');
+    Route::get('/edit_profile', [PsikologController::class, 'edit_profile'])->name('edit_profile');
+    Route::get('/detail_pemesan', [PsikologController::class, 'detail_pemesan'])->name('detail_pemesan');
+    Route::get('/input_hasil', [PsikologController::class, 'input_hasil'])->name('input_hasil');
+    Route::get('/psikotest', [PsikologController::class, 'psikotest'])->name('psikotest');
+    Route::get('/buat_psikotest', [PsikologController::class, 'buat_psikotest'])->name('buat_psikotest');
+});
 
 
 
