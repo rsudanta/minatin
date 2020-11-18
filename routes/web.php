@@ -23,6 +23,7 @@ Route::group(['middleware' => 'active'], function() {
     Route::get('/', [HomeController::class, 'index'])->name('user_home');
     Route::get('/order', [OrderController::class, 'index'])->name('user_order');
     Route::get('/user_edit-profile', [EditProfileController::class, 'editprofile'])->name('user_edit-profile');
+    Route::get('/user-edit-password', [EditProfileController::class, 'editpassword'])->name('user_edit-password');
 });
 
 Route::prefix('psikolog')
