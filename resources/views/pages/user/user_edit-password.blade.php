@@ -13,9 +13,9 @@
             </p>
         </div>
         <nav class="nav nav-edit">
-                <a class="nav-link active" href="#">Edit Profile</a>
-                <a class="nav-link" href="{{ route('editpassword') }}">Edit Password</a>
-            </nav>
+                <a class="nav-link" href="#">Edit Profile</a>
+                <a class="nav-link active" href="#">Edit Password</a>
+        </nav>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -34,17 +34,13 @@
                 @method('PUT')
                 <div class="content-edit-profileuser">
                     <div class="form-group">
-                        <label for="name">Nama Lengkap</label>
-                        <input type="text" name="name" class="form-control" id="name" value="{{ $item->name }}"
-                            aria-describedby="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="avatar">Foto Profil</label>
-                        <input type="file" name="avatar" class="form-control" id="avatar" value="{{ old($item->avatar) }}"                            aria-describedby="avatar">
+                        <label for="pass">Password baru</label>
+                        <input type="text" name="pass" class="form-control" id="pass" value="{{ $item->password }}"
+                            aria-describedby="pass">
                     </div>
                     <button type="submit" class="btn btn-editprofileuser"><p><i class="fas fa-editprofileuser"></i> Submit</p></button>
                 </div>
             </form>
-        @endforeach
+            @endforeach
 
     @endsection
