@@ -20,11 +20,11 @@ Profile Psikolog
     <div class="content-home">
         <div class="container-profile-pemesan">
             <div class="content-profile-kiri">
-                <img src="img/profile.png" alt="" class="rounder-circle img-detail-pemesan">
+                <img src="{{ asset('storage/avatar/' . $psikologs->namaAvaPsikolog) }}" alt="" class="rounded-circle img-detail-pemesan">
             </div>
             <div>
-                <div class="nama-pemesan">Floyd Miles</div>
-                <div class="order-id">ID #0011022</div>
+                <div class="nama-pemesan">{{ $psikologs->namaPsikolog}}</div>
+                <div class="order-id">ID Psikolog #{{ $psikologs->idPsikolog }}</div>
             </div>
         </div>
         <div class="container-detail-pemesan">
@@ -33,7 +33,7 @@ Profile Psikolog
                     <div class="data-detail-pemesan-kiri">Nama Penyelenggara</div>
                 </div>
                 <div class="col-8">
-                    <div class="data-detail-pemesan-kanan">Sehat Mental</div>
+                    <div class="data-detail-pemesan-kanan">{{ $psikologs->namaPenyelenggara }}</div>
                 </div>
             </div>
             <div class="row">
@@ -41,7 +41,7 @@ Profile Psikolog
                     <div class="data-detail-pemesan-kiri">Nama Psikolog</div>
                 </div>
                 <div class="col-8">
-                    <div class="data-detail-pemesan-kanan">Floyd Miles</div>
+                    <div class="data-detail-pemesan-kanan">{{ $psikologs->namaPsikolog }}</div>
                 </div>
             </div>
             <div class="row">
@@ -49,7 +49,7 @@ Profile Psikolog
                     <div class="data-detail-pemesan-kiri">Bidang Psikolog</div>
                 </div>
                 <div class="col-8">
-                    <div class="data-detail-pemesan-kanan">Psikolog Anak</div>
+                    <div class="data-detail-pemesan-kanan">{{ $psikologs->bidangPsikolog }}</div>
                 </div>
             </div>
             <div class="row">
@@ -57,7 +57,7 @@ Profile Psikolog
                     <div class="data-detail-pemesan-kiri">Lama Kerja</div>
                 </div>
                 <div class="col-8">
-                    <div class="data-detail-pemesan-kanan">4 tahun</div>
+                    <div class="data-detail-pemesan-kanan">{{ $psikologs->lamaKerja }} tahun</div>
                 </div>
             </div>
             <div class="row">
@@ -65,7 +65,7 @@ Profile Psikolog
                     <div class="data-detail-pemesan-kiri">Edukasi</div>
                 </div>
                 <div class="col-8">
-                    <div class="data-detail-pemesan-kanan">S3 Psikolog Anak</div>
+                    <div class="data-detail-pemesan-kanan">{{ $psikologs->edukasiPsikolog }}</div>
                 </div>
             </div>
             <div class="row">
@@ -73,21 +73,13 @@ Profile Psikolog
                     <div class="data-detail-pemesan-kiri">Deskripsi</div>
                 </div>
                 <div class="col-8">
-                    <div class="data-detail-pemesan-kanan">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo eligendi aspernatur assumenda! Provident, quas accusantium corporis, ipsam odit quidem aut ipsa maiores eligendi veritatis suscipit aspernatur harum voluptatum consequuntur quibusdam?</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="data-detail-pemesan-kiri">Jurusan yang diinginkan</div>
-                </div>
-                <div class="col-8">
-                    <div class="data-detail-pemesan-kanan">You</div>
+                    <div class="data-detail-pemesan-kanan">{{ $psikologs->deskripsiPsikolog }}</div>
                 </div>
             </div>
             <div class="text-right">
-                <a href="{{ route('edit_profile') }}" class="btn btn-buat">Edit</a>
+                <a href="{{ route('edit_profile', ['id'=> $psikologs->idPsikolog]) }}" class="btn btn-buat">Edit</a>
             </div>
-        </div>
+         </div>
     </div>
 </div>
 @endsection

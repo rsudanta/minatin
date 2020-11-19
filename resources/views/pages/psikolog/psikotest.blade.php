@@ -22,7 +22,7 @@ Psikotest
             <i class="fas fa-exclamation-circle"></i>
         </div>
         <div>Kamu belum membuat psikotest!</div>
-        <a href="{{ route('buat_psikotest') }}" class="btn btn-buat">Buat</a>
+        <a href="{{ route('buat_psikotest', ['id'=> $psikologs->idPsikolog]) }}" class="btn btn-buat">Buat</a>
     </div>
 </div>
 @endsection

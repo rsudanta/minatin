@@ -494,6 +494,7 @@ i {
 .img-pemesan {
     height: 130px;
     width: 130px;
+    border-radius: 10px;
 }
 
 .img-detail-pemesan {
