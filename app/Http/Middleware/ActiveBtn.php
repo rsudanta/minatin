@@ -19,6 +19,9 @@ class ActiveBtn
         $active['home']     = '';
         $active['order']  = '';
         $active['profile']     = '';
+        $active['dashboard']  = '';
+        $active['psikotest']     = '';
+
     
         $route = $request->getPathInfo();
     
@@ -28,6 +31,15 @@ class ActiveBtn
                 break;
             case(strstr($route, '/order')) :
                 $active['order'] = 'active';
+                break;
+            case(strstr($route, '/psikotest')) :
+                $active['psikotest'] = 'active';
+                break;
+            case(strstr($route, '/dashboard')) :
+                $active['dashboard'] = 'active';
+                break;
+            case(strstr($route, '/edit')) :
+                $active['dashboard'] = 'active';
                 break;
             default:
                 $active['home'] = 'active';
