@@ -19,12 +19,17 @@ class ActiveBtn
         $active['home']     = '';
         $active['order']  = '';
         $active['profile']     = '';
+        $active['daftar']     = '';
+        $active['masuk']     = '';
     
         $route = $request->getPathInfo();
     
         switch(true) {
-            case(strstr($route, '/profile')) :
-                $active['profile'] = 'active';
+            case(strstr($route, '/login')) :
+                $active['masuk'] = 'active';
+                break;
+            case(strstr($route, '/register')) :
+                $active['daftar'] = 'active';
                 break;
             case(strstr($route, '/order')) :
                 $active['order'] = 'active';
@@ -36,7 +41,7 @@ class ActiveBtn
                 $active['profile'] = 'active';
                 break;
             default:
-                $active['home'] = 'active';
+                $active['landing'] = 'active';
         }
     
         \View::share('active', $active );

@@ -9,7 +9,10 @@ html p {
 body {
   font-family: 'Roboto', sans-serif;
 }
-
+.logoLP {
+  width: 94px;
+  height: 91px;
+}
 .navbar .nav-item {
   margin-left: 30px;
 }
@@ -35,12 +38,12 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-align: center;
 }
 
-.modal-footer p a{
-  color: #FE993B !important;
+.btn-minatin :hover{
+  background-color: #D0853F;
 }
 
 section {
@@ -185,8 +188,7 @@ section {
 }
 
 .section-testimoni .card-img {
-
-  background: linear-gradient(179.91deg, rgba(255, 255, 255, 0) 0.07%, #000000 92.71%), url("/img/work.png") no-repeat;
+  background: linear-gradient(179.91deg, rgba(255, 255, 255, 0) 0.07%, #000000 92.71%), url("/img/testi.png") no-repeat;
   background-size: contain;
   border-radius: 27px;
   width: 181px;
@@ -248,4 +250,29 @@ section {
   text-decoration: none;
   color: inherit;
 }
+
+.logonext {
+  width: 60px;
+  height: 57px;
+}
+
+.btn-nextminatin {
+  min-width: 125px;
+  background: #FE993B;
+  border-radius: 20px;
+}
+
+.btn-nextminatin p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  text-align: center;
+}
+
+.btn-nextminatin:hover{
+  color: #D0853F;
+}
+
 /*# sourceMappingURL=newlandingpage.css.map */
+
