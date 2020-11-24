@@ -9,4 +9,7 @@ class EditProfileController extends Controller
     function editprofile(){
         return view('pages.user.user_edit-profile');
     }
+    function editpassword(){
+        return view('pages.user.user_edit-password');
+    }
 }

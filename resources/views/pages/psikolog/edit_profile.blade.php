@@ -20,25 +20,56 @@ Edit Profile
     </div>
     <!--End Header-->
     <div class="content-home">
+
+        @if(session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+        @endif    
+
         <nav class="nav nav-edit">
             <a class="nav-link active" href="#">Edit Profile</a>
             <a class="nav-link" href="#">Edit Password</a>
         </nav>
+        
         <div class="container-input-hasil">
-            <form class="form-input-hasil">
+            <form class="form-input-hasil" action="{{ route('update_profile', ['id'=>$psikologs->idPsikolog]) }}" enctype="multipart/form-data" method="POST">
+                @csrf
+                <input type="hidden" name="idPsikolog" value="{{ $psikologs->idPsikolog }}">
                 <div class="form-group">
-                    <label for="namaLengkap">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="namaLengkap" placeholder="Nama Lengkap">
+                    <label for="namaPenyelenggara">Nama Penyelenggara</label>
+                    <input type="text" class="form-control" name="namaPenyelenggara" placeholder="Nama Penyelenggara" value="{{ $psikologs->namaPenyelenggara }}">
                 </div>
                 <div class="form-group">
-                    <label for="tglLahir">Tanggal Lahir</label>
-                    <input type="text" class="form-control" id="tglLahir" placeholder="Tanggal Lahir">
+                    <label for="namaPsikolog">Nama Psikolog</label>
+                    <input type="text" class="form-control" name="namaPsikolog" placeholder="Nama Psikolog" value="{{ $psikologs->namaPsikolog }}">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="bidangPsikolog">Bidang Psikolog</label>
+                      <input type="text" class="form-control" name="bidangPsikolog" placeholder="Bidang Psikolog" value="{{ $psikologs->bidangPsikolog}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lamaKerja">Lama Kerja (tahun)</label>
+                        <input type="number" class="form-control" name="lamaKerja" placeholder="Lama Kerja" value="{{ $psikologs->lamaKerja }}">    
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="jurusanIngin">Jurusan yang diinginkan</label>
-                    <input type="text" class="form-control" id="jurusanIngin" placeholder="Jurusan yang diinginkan">
+                    <label for="edukasi">Riwayat Edukasi</label>
+                    <input type="text" class="form-control" name="edukasiPsikolog" placeholder="Riwayat Edukasi" value="{{ $psikologs->edukasiPsikolog }}">
                 </div>
-                <button type="submit" class="btn btn-periksa">Submit</button>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea class="form-control" name="deskripsiPsikolog" rows="3" placeholder="Deskripsi">{{ $psikologs->deskripsiPsikolog }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fileHasilTes">Ganti Avatar</label>
+                    <input type="file" name="avatar" class="form-control-file" placeholder="Pilih avatar baru">
+                @error('avatar')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                @enderror
+                </div>
+                <button type="submit" class="btn btn-buat">Simpan</button>
             </form>
         </div>
     </div>
