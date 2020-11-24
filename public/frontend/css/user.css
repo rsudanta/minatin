@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .sidenav {
@@ -46,6 +47,7 @@ body {
 .pic-100 {
     width: 100px;
     height: 100px;
+    height: 150px;
 }
 
 .sidenav h2 {
@@ -136,6 +138,10 @@ body {
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
+    padding-bottom: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .content-home a {
@@ -158,6 +164,7 @@ body {
 .content-home a .card-psikotest .rounded-circle {
     height: 80px;
     width: 80px;
+    height: 80px;
 }
 
 .content-home a .card-psikotest h2 {
@@ -253,6 +260,10 @@ i {
 }
 
 .h1-content {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 24px;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -355,6 +366,7 @@ i {
 .content-detailsoal .detailprofile {
     border: 2px solid #C4C4C4;
     max-width: 660px;
+    width: 660px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 5px;
@@ -369,6 +381,11 @@ i {
     box-sizing: border-box;
     border-radius: 5px;
     padding: 20px;
+    width: 660px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .content-edit-profileuser {
@@ -502,6 +519,7 @@ i {
 .img-pemesan {
     height: 130px;
     width: 130px;
+    border-radius: 10px;
 }
 
 .img-detail-pemesan {
@@ -642,6 +660,35 @@ input.form-control {
 
 .nav-link.active {
     border-bottom: 3px solid #FE993B;
+}
+
+.icon-exclamation {
+    font-size: 150px;
+    color: #C4C4C4;
+    margin-bottom: 19px;
+    margin-left: 10px;
+}
+
+.btn-buat {
+    width: 200px;
+    height: 54px;
+    margin-top: 19px;
+    background: #FE993B;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #ffffff !important;
+}
+
+.btn-buat:hover {
+    background: #D0853F;
+}
+
+.content-missing {
+    margin-top: 300px;
+    margin-left: 30px;
+    text-align: center;
 }
 
 

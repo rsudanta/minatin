@@ -70,7 +70,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-7">
-                    <h1 class="title">MINATIN, helps you <span class="title orange">choose your future!</span>
+                    <h1 class="title">Hi PEMINAT!,we help you <span class="title orange">choose your future!</span>
                     </h1>
                     <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quasi eum ipsum iure
                         corporis voluptas. Facere ipsa deleniti atque consectetur et velit necessitatibus doloremque?

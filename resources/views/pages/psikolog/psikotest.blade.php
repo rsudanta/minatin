@@ -1,6 +1,7 @@
 @extends('layouts.psikolog.app_psikolog')
 
 @section('title')
+<<<<<<< HEAD
     Psikotest
 @endsection
 
@@ -50,3 +51,30 @@
         </div>
     </div>
 @endsection
+=======
+Psikotest
+@endsection
+
+@section('content')
+<div class="main">
+    <!--Header-->
+    <div class="fixed-top judul-page">
+        <h1 class="title">
+            Psikotest
+        </h1>
+        <p> <a href="#" class="bread-nav">
+                Psikotest
+            </a>
+        </p>
+    </div>
+    <!--End Header-->
+    <div class="content-missing">
+        <div class="icon-exclamation">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div>Kamu belum membuat psikotest!</div>
+        <a href="{{ route('buat_psikotest', ['id'=> $psikologs->idPsikolog]) }}" class="btn btn-buat">Buat</a>
+    </div>
+</div>
+@endsection
+>>>>>>> 6c54f044fc7a1c5a18ca51d0bce3a7c72c4f648d

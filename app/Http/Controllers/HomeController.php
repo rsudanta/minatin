@@ -14,4 +14,7 @@ class HomeController extends Controller
             'items' => $items
         ]);
     }
+    function editprofile(){
+        return view('pages.user.user_edit-profile');
+    }
 }

@@ -23,10 +23,18 @@ class ActiveBtn
         $active['psikotest']     = '';
 
     
+        $active['psikotest']     = '';
+
         $route = $request->getPathInfo();
     
         switch(true) {
-            case(strstr($route, '/profile')) :
+            case(strstr($route, '/login')) :
+                $active['masuk'] = 'active';
+                break;
+            case(strstr($route, '/register')) :
+                $active['daftar'] = 'active';
+                break;
+            case(strstr($route, '/profile_psikolog')) :
                 $active['profile'] = 'active';
                 break;
             case(strstr($route, '/order')) :
@@ -42,7 +50,7 @@ class ActiveBtn
                 $active['dashboard'] = 'active';
                 break;
             default:
-                $active['home'] = 'active';
+                $active['landing'] = 'active';
         }
     
         \View::share('active', $active );
