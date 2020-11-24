@@ -30,6 +30,7 @@ class PsikotestController extends Controller
     {
         $data = $request->all();
         $data['slug']= Str::slug($request->judul);
+        
 
         DetailPsikotest::with(['user'])->create($data);
         return redirect()->route('psikolog.psikotest', Auth::user()->id);

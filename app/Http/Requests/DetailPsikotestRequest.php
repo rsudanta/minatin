@@ -28,7 +28,7 @@ class DetailPsikotestRequest extends FormRequest
             'user_id'=>'required|integer|exists:users,id',
             'deskripsi_psikotest'=> 'required',
             'harga'=> 'required |integer|min:0',
-            'jumlah_soal'=> 'required|integer|min:0',
+            'jumlah_soal'=> 'required|integer|min:0',   
         ];
     }
 

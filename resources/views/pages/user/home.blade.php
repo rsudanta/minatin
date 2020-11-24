@@ -40,7 +40,7 @@
                                                 class="fas fa-business-time"></i>{{ $item->user->lama_kerja . ' tahun' }}</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                         </a>
                     </div>
                 @empty
