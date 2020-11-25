@@ -10,10 +10,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $items = User::first();
-        return view('pages.user.profile', [
-            'items' => $items
-        ]);
+        return view('pages.user.profile');
     }
 
 
@@ -50,7 +47,7 @@ class ProfileController extends Controller
             $tujuan_upload = 'storage/avatars';
             $file->move($tujuan_upload, $nama_file);
         } else
-            $nama_file = User::value('avatar');
+            $nama_file = User::where('id',$id)->value('avatar');
         $data = [
             'name' => $request->name,
             'avatar' => $nama_file,

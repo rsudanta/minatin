@@ -39,15 +39,15 @@ class ProfilePsikologController extends Controller
             $tujuan_upload = 'storage/avatars';
             $file->move($tujuan_upload, $nama_file);
         } else
-            $nama_file = User::value('avatar');
+            User::where('id', $id)->value('avatar');
         $data = [
-            'penyelenggara'=> $request->penyelenggara,
+            'penyelenggara' => $request->penyelenggara,
             'name' => $request->name,
             'avatar' => $nama_file,
-            'bidang'=> $request->bidang,
-            'lama_kerja'=> $request->lama_kerja,
-            'edukasi'=> $request->edukasi,
-            'deskripsi'=> $request->deskripsi,
+            'bidang' => $request->bidang,
+            'lama_kerja' => $request->lama_kerja,
+            'edukasi' => $request->edukasi,
+            'deskripsi' => $request->deskripsi,
 
         ];
         $item = User::findOrFail($id);
