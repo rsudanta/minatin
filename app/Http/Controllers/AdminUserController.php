@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LandingPageController extends Controller
+class AdminUserController extends Controller
 {
     function index(){
-        return view('pages.admin_user');
+        return view('admin_user');
     }
 }

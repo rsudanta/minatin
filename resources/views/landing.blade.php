@@ -36,7 +36,7 @@
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('user_home') }}">
+                        <a class="nav-link" href="{{Auth::user()->roles == 'ADMIN' ? route('admin.user') : route('user_home')}}">
                             <p>Dashboard Saya</p>
                         </a>
                     </li>

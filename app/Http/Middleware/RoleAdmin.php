@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class RolePsikolog
+class RoleAdmin
 {
     /**
      * Handle an incoming request.
@@ -20,6 +20,6 @@ class RolePsikolog
         if(Auth::user() && Auth::user()->roles == 'ADMIN'){
             return $next($request);
         }
-        return redirect('user/dashboard');
+        return redirect('psikolog/dashboard');
     }
 }
