@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="parent">
-                            <a href="" class="join-card btn btn-card">
+                            <a href="{{ route('psikolog.psikotest.soal', $item->id) }}" class="join-card btn btn-card">
                                 <p>Buat Soal</p>
                             </a>
                         </div>

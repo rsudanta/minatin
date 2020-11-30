@@ -47,6 +47,12 @@ Route::prefix('psikolog')
             ->name('psikolog.psikotest.show');
         Route::post('psikotest/buat-psikotest/create', 'App\Http\Controllers\PsikotestController@store')
             ->name('psikolog.psikotest.create');
+        Route::get('psikotest/{id}/soal', 'App\Http\Controllers\SoalController@index')
+            ->name('psikolog.psikotest.soal');
+        Route::get('psikotest/buat-soal/new', 'App\Http\Controllers\SoalController@create')
+            ->name('psikolog.psikotest.soal.create');
+        Route::post('psikotest/buat-soal/store', 'App\Http\Controllers\SoalController@store')
+            ->name('psikolog.psikotest.soal.store');
     });
 Auth::routes(['verify' => true]);
 
