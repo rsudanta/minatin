@@ -70,26 +70,35 @@
                                             <th scope="col">Nama</th>
                                             <th scope="col">E-mail</th>
                                             <th scope="col">Role</th>
-                                            <th scope="col">Edit</th>
                                         </tr>
                                     </thead>
                                     @forelse ($items as $item)
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">{{ $item->id }}</th>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->email }}</td>
-                                                <td>
-                                                    {{ $item->roles }}
-                                                </td>
-                                                <td>
-                                                    <a href="{{ route('admin.user.show', $item->id) }}"
-                                                        class="btn btn-primary" type="submit"><i class="fa fa-edit"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    @empty
-                                        <p>Tidak ada user</p>
+                                        <form action="{{ route('admin.user.update', $item->id) }}" method="POST">
+                                            @csrf
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">{{ $item->id }}</th>
+                                                    <td>{{ $item->name }}</td>
+                                                    <td>{{ $item->email }}</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <select class="custom-select" id="roles" name="roles">
+                                                                <option value="{{ $item->roles }}">
+                                                                    {{ $item->roles }} (Current Role)
+                                                                </option>
+                                                                <option value="USER">USER</option>
+                                                                <option value="PSIKOLOG">PSIKOLOG</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        @empty
+                                            <p>Tidak ada user</p>
+                                        </form>
                                     @endforelse
                                 </table>
 

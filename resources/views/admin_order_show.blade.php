@@ -25,8 +25,7 @@
         <img class="mx-auto d-block rounded-circle" src="/storage/avatars/{{ Auth::user()->avatar }}" alt="">
         <h2 class="text-center">{{ Auth::user()->name }}</h2>
         <a href="{{ route('admin.user') }}" class="{{ $active['admin-user'] }}"><i class="fas fa-user-alt"></i>User</a>
-        <a href="{{ route('admin.order') }}" class="{{ $active['admin-order'] }}"><i
-                class="fas fa-shopping-cart"></i>Order</a>
+        <a href="{{ route('admin.order') }}" class="active"><i class="fas fa-shopping-cart"></i>Order</a>
         <form action="{{ url('logout') }}" method="post">
             @csrf
             <button class="btn"><i class="fas fa-sign-out-alt"></i>Logout</button>
@@ -39,10 +38,10 @@
         <!--Header-->
         <div class="fixed-top judul-page">
             <h1 class="title">
-                User
+                Order
             </h1>
             <p> <a class="bread-nav" href="#">
-                    User
+                    Order
                 </a>
             </p>
         </div>
@@ -50,46 +49,42 @@
         <div class="content-admin">
             <div class="row">
                 <div class="col-sm-12">
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
                     <div class="card border-0 shadow">
                         <div class="card-body p-5">
                             <div class="table-responsive">
                                 <table class="table m-0">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Nama</th>
-                                            <th scope="col">E-mail</th>
-                                            <th scope="col">Role</th>
-                                            <th scope="col">Edit</th>
-                                        </tr>
-                                    </thead>
                                     @forelse ($items as $item)
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">{{ $item->id }}</th>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->email }}</td>
-                                                <td>
-                                                    {{ $item->roles }}
-                                                </td>
-                                                <td>
-                                                    <a href="{{ route('admin.user.show', $item->id) }}"
-                                                        class="btn btn-primary" type="submit"><i class="fa fa-edit"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    @empty
-                                        <p>Tidak ada user</p>
+                                        <form action="{{ route('admin.order.update', $item->id) }}" method="POST">
+                                            @csrf
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Order ID</th>
+                                                    <th scope="col">Nama</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">{{ $item->id }}</th>
+                                                    <td>{{ $item->user->name }}</td>
+                                                    <td>{{ $item->user->email }}</td>
+                                                    <td>
+                                                        <select class="custom-select" id="status" name="status">
+                                                            <option value="{{ $item->status }}">
+                                                                {{ $item->status }} (Current Status)
+                                                            </option>
+                                                            <option value="PAID">PAID</option>
+                                                            <option value="PENDING">PENDING</option>
+                                                        </select>
+                                                    <td>
+                                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        @empty
+                                            <p>Tidak ada data transaksi</p>
+                                        </form>
                                     @endforelse
                                 </table>
 

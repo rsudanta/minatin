@@ -57,6 +57,14 @@ Route::prefix('admin')
             ->name('admin.user');
         Route::get('/order', 'App\Http\Controllers\AdminOrderController@index')
             ->name('admin.order');
+        Route::get('/order/show/{id}', 'App\Http\Controllers\AdminOrderController@show')
+            ->name('admin.order.show');
+        Route::post('/order/update/{id}', 'App\Http\Controllers\AdminOrderController@update')
+            ->name('admin.order.update');
+        Route::get('/user/show/{id}', 'App\Http\Controllers\AdminUserController@show')
+            ->name('admin.user.show');
+        Route::post('/user/update/{id}', 'App\Http\Controllers\AdminUserController@update')
+            ->name('admin.user.update');
     });
 Auth::routes(['verify' => true]);
 
