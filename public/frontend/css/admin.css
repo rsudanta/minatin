@@ -1,0 +1,218 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 327px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFCF6;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: 1px solid #c4c4c4;
+}
+
+.sidenav a {
+    padding-left: 75px;
+    padding-top: 32px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #c4c4c4;
+    display: block;
+}
+
+.sidenav button {
+    padding-left: 75px;
+    margin-top: 100px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #c4c4c4;
+    display: block;
+}
+
+.sidenav .rounded-circle {
+    height: 150px;
+    width: 150px;
+}
+
+.pic-100 {
+    width: 100px;
+    height: 100px;
+}
+
+.sidenav h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    padding-top: 24px;
+}
+
+.sidenav .navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    padding-left: 120px;
+}
+
+.sidenav i {
+    margin-right: 15px;
+}
+
+.sidenav a:hover {
+    color: #D0853F;
+}
+
+.sidenav button:hover {
+    color: red;
+}
+
+.main {
+    margin-left: 327px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+.active {
+    color: #FE993B !important;
+    font-weight: 700 !important;
+}
+
+.fixed-top {
+    margin-left: 327px !important;
+}
+
+.judul-page {
+    height: 141px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #c4c4c4;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.judul-page h1 {
+    padding-top: 25px;
+    padding-left: 30px;
+}
+
+.judul-page p {
+    padding-left: 30px;
+}
+
+.judul-page a {
+    color: inherit;
+    text-decoration: none;
+    padding-top: 8px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.bread-nav {
+    font-style: normal;
+    font-weight: bold !important;
+    font-size: 24px;
+}
+
+.title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.content-admin {
+    margin-top: 165px;
+}
+
+.content-admin .card-admin {
+    width: 460px;
+    height: 140px;
+    padding: 30px 30px 14px 30px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.content-admin .card-admin .rounded-circle {
+    height: 80px;
+    width: 80px;
+}
+
+.content-admin .card-admin h2 {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.content-admin .card-admin p {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.content-admin .card-admin .star {
+    padding-left: 0px;
+}
+
+.pending {
+    padding-top: 24px;
+}
+
+.paid {
+    padding-top: 70px;
+}
+
+.finish {
+    padding-top: 70px;
+    margin-bottom: 100px;
+}
+
+.h1-content {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.content-admin a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-missing {
+    margin-top: 300px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+
+/*# sourceMappingURL=user.css.map */

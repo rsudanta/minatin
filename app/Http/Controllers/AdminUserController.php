@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class LandingPageController extends Controller
 {
     function index(){
-        return view('pages.landingpage');
+        return view('pages.admin_user');
     }
 }

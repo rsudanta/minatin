@@ -50,6 +50,16 @@ Route::prefix('psikolog')
     });
 Auth::routes(['verify' => true]);
 
+Route::prefix('admin')
+    ->middleware(['auth', 'admin', 'active'])
+    ->group(function () {
+        Route::get('/admin_user', 'App\Http\Controllers\AdminUserController@index')
+            ->name('psikolog.dashboard');
+        Route::get('/admin_order', 'App\Http\Controllers\AdminOrderController@index')
+            ->name('psikolog.profile.show');
+    });
+Auth::routes(['verify' => true]);
+
 Blade::directive('money', function ($expression) {
     return "Rp <?php echo number_format($expression,0,',','.'); ?>";
 });
