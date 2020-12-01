@@ -11,9 +11,9 @@
             <h1 class="title">
                 Psikotest
             </h1>
-            <p> <a href="#">
+            <p> <a href="{{ route('psikolog.psikotest', Auth::user()->id) }}">
                     Psikotest
-                </a> > <a href="" class="bread-nav">Buat Psikotest</a>
+                </a> > <a href="" class="bread-nav">Lihat Soal</a>
             </p>
         </div>
         <!--End Header-->
@@ -29,7 +29,7 @@
                 </div>
             @endif
             <div class="pb-5">
-                <a class="btn btn-primary" href="{{ route('psikolog.psikotest.soal.create') }}" type="submit">Buat Soal</a>
+                <a class="btn btn-primary" href="{{ route('psikolog.psikotest.soal') }}" type="submit">Buat Soal</a>
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -37,34 +37,27 @@
                         <div class="card-body p-5">
                             <div class="table-responsive">
                                 <table class="table m-0">
-                                    @forelse ($items as $item)
-                                        <form action="{{ route('admin.order.update', $item->id) }}" method="POST">
-                                            @csrf
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Id</th>
-                                                    <th scope="col">Soal</th>
-                                                    <th scope="col">Opsi A</th>
-                                                    <th scope="col">Opsi B</th>
-                                                    <th scope="col">Opsi C</th>
-                                                    <th scope="col">Opsi D</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">{{ $item->id }}</th>
-                                                    <td>{{ $item->soal }}</td>
-                                                    <td>{{ $item->opsi_1 }}</td>
-                                                    <td>{{ $item->opsi_2 }}</td>
-                                                    <td>{{ $item->opsi_3 }}</td>
-                                                    <td>{{ $item->opsi_4 }}</td>
-                                                    <td>
-                                                        <button class="btn btn-primary" type="submit">Submit</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        @empty
-                                            <p>Tidak ada data soal</p>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Soal</th>
+                                            <th scope="col">Opsi</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @forelse ($items as $item)
+                                            <tr>
+                                                <th scope="row">{{ $item->soal->id }}</th>
+                                                <td>{{ $item->soal->soal }}</td>
+                                                <td>{{ $item->opsi }}</td>
+                                                <td>
+                                                    <button class="btn btn-primary" type="submit">Edit</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    @empty
+                                        <p>Tidak ada data soal</p>
                                         </form>
                                     @endforelse
                                 </table>

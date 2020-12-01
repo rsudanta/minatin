@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSoalTable extends Migration
+class CreateOpsiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSoalTable extends Migration
      */
     public function up()
     {
-        Schema::create('soal', function (Blueprint $table) {
+        Schema::create('opsi', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('detail_id');
-            $table->string('soal');
+            $table->integer('soal_id');
+            $table->string('opsi');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateSoalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('soal');
+        Schema::dropIfExists('opsi');
     }
 }

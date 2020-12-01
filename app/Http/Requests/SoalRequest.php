@@ -25,9 +25,7 @@ class SoalRequest extends FormRequest
     {
         return [
             'soal' => 'required',
-            'opsi_1'=>'required',
-            'opsi_2'=>'required',
-            'opsi_3'=>'required',
-            'opsi_4'=> 'required',        ];
+            'opsi' => 'required'
+        ];
     }
 }

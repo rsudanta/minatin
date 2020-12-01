@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ActiveBtn
 {
+
     /**
      * Handle an incoming request.
      *
