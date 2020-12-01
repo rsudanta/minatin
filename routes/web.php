@@ -26,6 +26,10 @@ Route::prefix('user')
             ->name('detail.psikotest');
         Route::post('/dashboard/checkout/{id}', 'App\Http\Controllers\DetailPsikotestController@success')
             ->name('sukses');
+        Route::get('/kerjakan/{id}', 'App\Http\Controllers\KerjakanController@index')
+            ->name('user.kerjakan');
+        Route::post('/kerjakan/store', 'App\Http\Controllers\KerjakanController@store')
+            ->name('user.kerjakan.store');
         Route::resource('users', App\Http\Controllers\ProfileController::class);
     });
 
@@ -47,6 +51,30 @@ Route::prefix('psikolog')
             ->name('psikolog.psikotest.show');
         Route::post('psikotest/buat-psikotest/create', 'App\Http\Controllers\PsikotestController@store')
             ->name('psikolog.psikotest.create');
+        Route::get('/lihat-soal/{id}', 'App\Http\Controllers\SoalController@show')
+            ->name('psikolog.psikotest.soal.show');
+        Route::get('/buat-soal', 'App\Http\Controllers\SoalController@index')
+            ->name('psikolog.psikotest.soal');
+        Route::post('/buat-opsi/store', 'App\Http\Controllers\SoalController@store')
+            ->name('psikolog.psikotest.soal.store');
+    });
+Auth::routes(['verify' => true]);
+
+Route::prefix('admin')
+    ->middleware(['auth', 'admin', 'active'])
+    ->group(function () {
+        Route::get('/user', 'App\Http\Controllers\AdminUserController@index')
+            ->name('admin.user');
+        Route::get('/order', 'App\Http\Controllers\AdminOrderController@index')
+            ->name('admin.order');
+        Route::get('/order/show/{id}', 'App\Http\Controllers\AdminOrderController@show')
+            ->name('admin.order.show');
+        Route::post('/order/update/{id}', 'App\Http\Controllers\AdminOrderController@update')
+            ->name('admin.order.update');
+        Route::get('/user/show/{id}', 'App\Http\Controllers\AdminUserController@show')
+            ->name('admin.user.show');
+        Route::post('/user/update/{id}', 'App\Http\Controllers\AdminUserController@update')
+            ->name('admin.user.update');
     });
 Auth::routes(['verify' => true]);
 

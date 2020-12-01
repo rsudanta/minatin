@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="parent">
-                                <a href="" class="join-card btn btn-card">
+                                <a href="{{ route('user.kerjakan', $item->detail_psikotest->id )}}" class="join-card btn btn-card">
                                     <p>Kerjakan</p>
                                 </a>
                             </div>

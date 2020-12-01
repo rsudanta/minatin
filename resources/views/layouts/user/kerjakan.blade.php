@@ -16,7 +16,6 @@
 
 </body>
 <footer>
-    @include('includes.user.sidebar')
 </footer>
 
 </html>

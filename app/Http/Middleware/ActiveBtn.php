@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ActiveBtn
 {
+
     /**
      * Handle an incoming request.
      *
@@ -21,6 +22,8 @@ class ActiveBtn
         $active['profile']     = '';
         $active['dashboard']  = '';
         $active['psikotest']     = '';
+        $active['admin-user']     = '';
+        $active['admin-order']     = '';
 
     
         $active['psikotest']     = '';
@@ -42,6 +45,12 @@ class ActiveBtn
                 break;
             case(strstr($route, '/psikotest')) :
                 $active['psikotest'] = 'active';
+                break;
+            case(strstr($route, '/user')) :
+                $active['admin-user'] = 'active';
+                break;
+            case(strstr($route, '/order')) :
+                $active['admin-order'] = 'active';
                 break;
             case(strstr($route, '/dashboard')) :
                 $active['dashboard'] = 'active';
