@@ -1,5 +1,9 @@
 @extends('layouts.user.app')
 
+@section('title')
+Home
+@endsection
+
 @section('content')
     <div class="main">
         <!--Header-->

@@ -59,7 +59,7 @@
                     </div>
                     <div class="form-group">
                         <label for="deskripsi">Tentang Saya</label>
-                        <textarea class="form-control" name="deskripsi" rows="3" placeholder="Deskripsi"  value="{{ $items->deskripsi }}"></textarea>
+                        <textarea class="form-control" name="deskripsi" rows="3" placeholder="Deskripsi">{{ $items->deskripsi }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="avatar">Ganti Avatar</label>
