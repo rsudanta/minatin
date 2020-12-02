@@ -39,10 +39,11 @@
                         </div>
                     </div>
                 @empty
-                    <div class="">
-                        <p>
-                            Kamu belum membuat psikotest!
-                        </p>
+                    <div class="psikotest-kosong">
+                        <div class="icon-exclamation">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p>Kamu belum membuat psikotest!</p>
                         <a href="{{ route('psikolog.psikotest.show', Auth::user()->id) }}" class="btn btn-submit">Buat</a>
                     </div>
                 @endforelse

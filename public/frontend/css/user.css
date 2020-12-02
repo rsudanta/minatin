@@ -378,6 +378,12 @@ i {
     margin-bottom: 30px;
 }
 
+.content-atas p {
+    font-weight: 300;
+    font-size: 18px;
+    text-align: justify;
+}
+
 .content-edit-profileuser {
     margin-top: 165px;
     margin-left: 30px;
@@ -664,6 +670,13 @@ input.form-control {
     margin-left: 10px;
 }
 
+.psikotest-kosong {
+    text-align: center;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .btn-buat {
     width: 200px;
     height: 54px;
@@ -680,12 +693,6 @@ input.form-control {
     background: #D0853F;
 }
 
-.content-missing {
-    margin-top: 300px;
-    margin-left: 30px;
-    text-align: center;
-}
-
 .content-detailsoal .card-join-test {
     width: 353px;
     height: 220px;
@@ -697,7 +704,6 @@ input.form-control {
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
-    margin-left: -30px;
 }
 
 .btn-join-test-card {
@@ -722,11 +728,57 @@ input.form-control {
 
 .join-test-card {
     margin-top: -40px;
-    margin-left: -30px;
 }
 
 .content-profile-kiri-psikolog {
     margin-right: -40px;
+}
+
+.total-harga {
+    width: 950px;
+    height: 60px;
+    padding: 10px 0px 0px 0px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.total-psikotest {
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-bayar {
+    margin-top: 5px;
+    margin-left: 640px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.content-pembayaran {
+    margin-top: 30px;
+}
+
+.detail-rek {
+    text-align: center;
+    font-size: 18px;
+}
+
+.no-rek {
+    font-size: 24px;
+    color: #FE993B;
+}
+
+.content-pembayaran .btn-link {
+    color: black;
 }
 
 

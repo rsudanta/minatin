@@ -1,5 +1,9 @@
 @extends('layouts.user.app')
 
+@section('title')
+Order
+@endsection
+
 @section('content')
 
     <div class="main">
@@ -34,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="parent">
-                                <a href="" class="join-card btn btn-card">
+                                <a href="{{ route('pembayaran') }}" class="join-card btn btn-card">
                                     <p>Bayar</p>
                                 </a>
                             </div>

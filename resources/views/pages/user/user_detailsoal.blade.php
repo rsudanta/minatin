@@ -1,5 +1,9 @@
 @extends('layouts.user.app')
 
+@section('title')
+{{ $items->judul }}
+@endsection
+
 @section('content')
 
     <div class="main">
@@ -17,7 +21,7 @@
         <div class="content-detailsoal">
             <div class="content-atas">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-7 mr-5">
                         <h3>Description</h3>
                         <p>{{ $items->deskripsi_psikotest }}</p>
                     </div>

@@ -30,7 +30,9 @@ Route::prefix('user')
             ->name('user.kerjakan');
         Route::post('/kerjakan/store', 'App\Http\Controllers\KerjakanController@store')
             ->name('user.kerjakan.store');
-        Route::resource('users', App\Http\Controllers\ProfileController::class);
+        Route::get('/pembayaran', 'App\Http\Controllers\TestController@index')
+            ->name('pembayaran');
+        Route::resource('users', 'App\Http\Controllers\ProfileController::class');
     });
 
 Route::get('/', 'App\Http\Controllers\LandingPageController@index')->name('home');
@@ -79,7 +81,6 @@ Route::prefix('admin')
             ->name('admin.user.update');
     });
 Auth::routes(['verify' => true]);
-
 Blade::directive('money', function ($expression) {
     return "Rp <?php echo number_format($expression,0,',','.'); ?>";
 });

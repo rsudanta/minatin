@@ -40,9 +40,9 @@
                     </div>
                     <div class="form-group">
                         <label for="avatar">Foto Profil</label>
-                        <input type="file" name="avatar" class="form-control" id="avatar" value="{{ old($item->avatar) }}"                            aria-describedby="avatar">
+                        <input type="file" name="avatar" class="form-control" id="avatar" value="{{ old($item->avatar) }}" aria-describedby="avatar">
                     </div>
-                    <button type="submit" class="btn btn-editprofileuser"><p><i class="fas fa-editprofileuser"></i> Submit</p></button>
+                    <button type="submit" class="btn btn-editprofileuser"><p>Submit</p></button>
                 </div>
             </form>
         @endforeach
