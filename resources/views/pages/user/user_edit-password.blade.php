@@ -5,11 +5,11 @@
     <div class="main">
         <div class="fixed-top judul-page">
             <h1 class="title">
-                Edit Profile
+                Edit Password
             </h1>
             <p> <a href="#">
                     Profile
-                </a> > <a href="" class="bread-nav">Edit Profile</a>
+                </a> > <a href="" class="bread-nav">Edit Password</a>
             </p>
         </div>
         <nav class="nav nav-edit">

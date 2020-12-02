@@ -35,7 +35,7 @@
                             </div>
                             <div class="parent">
                                 <a href="" class="join-card btn btn-card">
-                                    <p>Cara Pembayaran</p>
+                                    <p>Bayar</p>
                                 </a>
                             </div>
                         </div>

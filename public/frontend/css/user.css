@@ -362,29 +362,20 @@ i {
     font-size: 18px;
 }
 
-.content-detailsoal .detailprofile {
+.content-detailsoal .deskripsi {
     border: 2px solid #C4C4C4;
     max-width: 660px;
-    width: 660px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
-    margin-top: -40px;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .content-detailsoal .education {
-    border: 2px solid #C4C4C4;
-    max-width: 660px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 20px;
-    width: 660px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .content-edit-profileuser {
@@ -569,14 +560,15 @@ i {
 }
 
 .data-detail-pemesan-kiri {
-    font-size: 24px;
+    font-size: 18px;
     margin-right: 115px;
     margin-bottom: 20px;
 }
 
 .data-detail-pemesan-kanan {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .container-profile-pemesan {
@@ -650,11 +642,15 @@ input.form-control {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    color: #ffffff !important;
+    color: hsl(0, 0%, 100%) !important;
 }
 
 .nav {
     font-size: 24px;
+}
+
+.nav-link {
+    color: black;
 }
 
 .nav-link.active {
@@ -688,6 +684,49 @@ input.form-control {
     margin-top: 300px;
     margin-left: 30px;
     text-align: center;
+}
+
+.content-detailsoal .card-join-test {
+    width: 353px;
+    height: 220px;
+    padding: 30px 30px 14px 30px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    margin-left: -30px;
+}
+
+.btn-join-test-card {
+    background: #FE993B;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 40px 40px;
+    width: 353px;
+    height: 56px;
+    display: inline-block;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.btn-join-test-card:hover {
+    background: #D0853F;
+    color: #FFFFFF;
+}
+
+.join-test-card {
+    margin-top: -40px;
+    margin-left: -30px;
+}
+
+.content-profile-kiri-psikolog {
+    margin-right: -40px;
 }
 
 
