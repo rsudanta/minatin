@@ -9,7 +9,7 @@
     <h2 class="text-center">{{ Auth::user()->name }}</h2>
     <a href="{{ route('psikolog.dashboard') }}" class="{{ $active['dashboard'] }}"><i
             class="fas fa-user-alt"></i>Profile</a>
-    <a href="" class=""><i class="fas fa-shopping-cart"></i>Order</a>
+    <a href="{{ route('psikolog.order', Auth::user()->id) }}" class="{{ $active['order'] }}"><i class="fas fa-shopping-cart"></i>Order</a>
     <a href="{{ route('psikolog.psikotest', Auth::user()->id ) }}" class="{{ $active['psikotest'] }}"><i class="fas fa-edit"></i></i>Psikotest</a>
     <form action="{{ url('logout') }}" method="post">
         @csrf

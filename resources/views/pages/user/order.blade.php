@@ -76,25 +76,30 @@
             <div class="finish">
                 <h1 class="h1-content">SUDAH SELESAI</h1>
                 <div class="row">
-                    <div class="col-6 pt-4">
-                        <div class="card-order">
-                            <div class="row">
-                                <div class="col-3">
-                                    <img src="img/profile.png" class="rounded-circle" alt="">
-                                </div>
-                                <div class="col-9">
-                                    <h2>Psikotest Minat dan Bakat</h2>
-                                    <p>Ronald Richards</p>
+                    @forelse ($finish as $item)
+                        <div class="col-6 pt-4">
+                            <div class="card-order">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="/storage/avatars/{{ $item->detail_psikotest->user->avatar }}"
+                                            class="rounded-circle" alt="">
+                                    </div>
+                                    <div class="col-9">
+                                        <h2>{{ $item->detail_psikotest->judul }}</h2>
+                                        <p>{{ $item->detail_psikotest->user->name }}</p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="parent">
+                                <a href="{{ route('user.kerjakan', $item->detail_psikotest->id )}}" class="join-card btn btn-card">
+                                    <p>Lihat Hasil</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="parent">
-                            <a href="" class="join-card btn btn-card">
-                                <p>Lihat Hasil</p>
-                            </a>
-                        </div>
+                    @empty
                     </div>
-                </div>
+                    <p class="info">Tidak ada psikotes yang sudah selesai</p>
+                @endforelse
             </div>
         </div>
     </div>

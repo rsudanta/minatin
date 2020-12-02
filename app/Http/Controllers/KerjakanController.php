@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DetailPsikotest;
 use App\Models\Hasil;
 use App\Models\Soal;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -36,6 +37,12 @@ class KerjakanController extends Controller
                 $userOption->save();
             }
         }
+
+
+        $transaction= Transaksi::where('detail_id',$detail_id)->where('user_id',Auth::user()->id)->where('status','PAID')->first();
+        $transaction->status = 'FINISHED';
+        $transaction->save();
+
         return redirect()->route('user_home');
     }
 }
