@@ -19,39 +19,23 @@ Order
     <!--End Header-->
     <div class="content-order">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 mr-4">
+                @forelse ($finish as $item)
+                    
+
                 <a href="">
-                    <div class="card-pemesan text-center">
-                        <img src="img/profile.png" alt="" class="rounded-circle img-pemesan">
-                        <div class="nama-pemesan">Vania</div>
-                        <div class="order-id">Order ID #00011012</div>
+                    <div class="card-pemesan text-center ">
+                        <img src="/storage/avatars/{{ $item->user->avatar }}" alt="" class="rounded-circle img-pemesan">
+                        <div class="nama-pemesan">{{ $item->user->name }}</div>
+                        <div class="order-id">Order ID #{{ $item->id }}</div>
                         <hr>
-                        <button class="status-nilai sudah" disabled>Sudah Dinilai</button>
+                        <button class="status-nilai belum" disabled>Beri peniliaan</button>
                     </div>
                 </a>
             </div>
-            <div class="col-4">
-                <a href="">
-                    <div class="card-pemesan text-center">
-                        <img src="img/profile.png" alt="" class="rounded-circle img-pemesan">
-                        <div class="nama-pemesan">Danta</div>
-                        <div class="order-id">Order ID #00011013</div>
-                        <hr>
-                        <button class="status-nilai belum" disabled>Belum Dinilai</button>
-                    </div>
-                </a>
-            </div>
-            <div class="col-4">
-                <a href="">
-                    <div class="card-pemesan text-center">
-                        <img src="img/profile.png" alt="" class="rounded-circle img-pemesan">
-                        <div class="nama-pemesan">Vania</div>
-                        <div class="order-id">Order ID #00011014</div>
-                        <hr>
-                        <button class="status-nilai sudah" disabled>Sudah Dinilai</button>
-                    </div>
-                </a>
-            </div>
+            @empty
+                 <p>Belum ada order</p>   
+            @endforelse
         </div>
     </div>
 </div>

@@ -57,6 +57,8 @@ Route::prefix('psikolog')
             ->name('psikolog.psikotest.soal');
         Route::post('/buat-opsi/store', 'App\Http\Controllers\SoalController@store')
             ->name('psikolog.psikotest.soal.store');
+        Route::get('/order/{id}', 'App\Http\Controllers\OrderPsikologController@index')
+            ->name('psikolog.order');
     });
 Auth::routes(['verify' => true]);
 
