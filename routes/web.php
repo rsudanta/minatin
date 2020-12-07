@@ -32,6 +32,10 @@ Route::prefix('user')
             ->name('user.kerjakan.store');
         Route::get('/pembayaran', 'App\Http\Controllers\TestController@index')
             ->name('pembayaran');
+        Route::get('/order/hasil/{id}', 'App\Http\Controllers\HasilPsikotestController@hasil_user')
+            ->name('user.hasil');
+        Route::get('/order/hasil/download/{id}', 'App\Http\Controllers\HasilPsikotestController@download')
+            ->name('user.hasil.download');
         Route::resource('users', 'App\Http\Controllers\ProfileController::class');
     });
 
@@ -61,6 +65,12 @@ Route::prefix('psikolog')
             ->name('psikolog.psikotest.soal.store');
         Route::get('/order/{id}', 'App\Http\Controllers\OrderPsikologController@index')
             ->name('psikolog.order');
+        Route::get('/order/hasil/{id}', 'App\Http\Controllers\HasilPsikotestController@index')
+            ->name('psikolog.hasil');
+        Route::get('/order/hasil/input-hasil/{id}', 'App\Http\Controllers\HasilPsikotestController@show')
+            ->name('psikolog.input_hasil');
+        Route::post('/order/hasil/input-hasil/store', 'App\Http\Controllers\HasilPsikotestController@store')
+            ->name('psikolog.input_hasil.store');
     });
 Auth::routes(['verify' => true]);
 

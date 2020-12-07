@@ -16,10 +16,12 @@ class OrderController extends Controller
         $pending = Transaksi::with(['user','detail_psikotest'])->where('status', 'PENDING')->where('user_id',$id)->get();
         $paid = Transaksi::with(['user','detail_psikotest'])->where('status', 'PAID')->where('user_id',$id)->get();
         $finish = Transaksi::with(['user','detail_psikotest'])->where('status', 'FINISHED')->where('user_id',$id)->get();
+        $check = Transaksi::with(['user','detail_psikotest'])->where('status', 'CHECKED')->where('user_id',$id)->get();
         return view('pages.user.order', [
             'pending' => $pending,
             'paid'=>$paid,
-            'finish'=>$finish
+            'finish'=>$finish,
+            'check'=>$check
         ]);
     }
 }

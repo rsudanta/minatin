@@ -78,9 +78,34 @@ Order
                 @endforelse
             </div>
             <div class="finish">
-                <h1 class="h1-content">SUDAH SELESAI</h1>
+                <h1 class="h1-content">MENUNGGU DIPERIKSA</h1>
                 <div class="row">
                     @forelse ($finish as $item)
+                        <div class="col-6 pt-4">
+                            <div class="card-order">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="/storage/avatars/{{ $item->detail_psikotest->user->avatar }}"
+                                            class="rounded-circle" alt="">
+                                    </div>
+                                    <div class="col-9">
+                                        <h2>{{ $item->detail_psikotest->judul }}</h2>
+                                        <p>Order ID #{{ $item->id }}</p>
+
+                                    </div>
+                                </div>
+                            </div>
+  
+                        </div>
+                    @empty
+                    </div>
+                    <p class="info">Tidak ada psikotes yang sudah selesai</p>
+                @endforelse
+            </div>
+            <div class="finish">
+                <h1 class="h1-content">SUDAH SELESAI</h1>
+                <div class="row">
+                    @forelse ($check as $item)
                         <div class="col-6 pt-4">
                             <div class="card-order">
                                 <div class="row">
@@ -95,7 +120,7 @@ Order
                                 </div>
                             </div>
                             <div class="parent">
-                                <a href="{{ route('user.kerjakan', $item->detail_psikotest->id )}}" class="join-card btn btn-card">
+                                <a href="{{ route('user.hasil', $item->id )}}" class="join-card btn btn-card">
                                     <p>Lihat Hasil</p>
                                 </a>
                             </div>

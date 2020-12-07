@@ -30,8 +30,8 @@
                     <input type="hidden" name="detail_id" value="{{ $item->detail_id }}">
                     <input type="hidden" name="soal_id[]" value="{{ $item->id }}">
                     @foreach ($item->opsi as $opsi)
-                        <div>
-                            <input type="radio" name="opsi[{{ $item->id }}][{{ $opsi->id }}]" value="{{ $opsi->id }}">
+                        <div class="pt-2">
+                            <input type="radio" name="opsi[{{ $item->id }}]" value="{{ $opsi->id }}">
                             {{ $opsi->opsi }}
                         </div>
                     @endforeach

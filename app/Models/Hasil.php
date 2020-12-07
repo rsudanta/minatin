@@ -24,4 +24,7 @@ class Hasil extends Model
     public function soal(){
         return $this->belongsTo(Soal::class,'soal_id','id');
     }
+    public function opsi(){
+        return $this->belongsTo(Opsi::class,'opsi_id','id');
+    }
 }

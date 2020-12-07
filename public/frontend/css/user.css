@@ -199,6 +199,11 @@ body {
     margin-left: 30px;
 }
 
+.content-paid {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
 .content-order .card-order {
     width: 460px;
     height: 140px;
@@ -624,6 +629,15 @@ i {
     border: 1px solid #C4C4C4;
 }
 
+.soal {
+    font-size: 18px;
+    line-height: 5px;
+}
+
+.answer {
+    font-weight: 700;
+}
+
 .form-input-hasil {
     margin-bottom: 0px;
 }
@@ -704,6 +718,10 @@ input.form-control {
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+}
+
+.table-hasil {
+    font-size: 24px;
 }
 
 .btn-join-test-card {
