@@ -78,6 +78,5 @@ class HasilPsikotestController extends Controller
         $file = public_path()."/storage/file/" . $items;
         $headers = array('Content-Type: application/pdf',);
         return Response::download($file,$items,$headers);
-        return redirect()->route('psikolog.order', Auth::user()->id);
     }
 }
