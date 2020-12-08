@@ -8,7 +8,7 @@
         </div>
         <div class="waktu-pengerjaan">
             <h3>
-                {{ $order->detail_psikotest_judul }}
+                {{ $order->detail_psikotest->judul }}
             </h3>
         </div>
         @if ($errors->any())

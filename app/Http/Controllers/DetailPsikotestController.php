@@ -30,6 +30,6 @@ class DetailPsikotestController extends Controller
         ]);
         Transaksi::create($data);
         
-        return redirect()->route('user_home');
+        return redirect()->route('user_order',Auth::user()->id);
     }
 }
