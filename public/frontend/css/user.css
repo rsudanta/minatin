@@ -60,6 +60,7 @@ body {
     padding-top: 0px;
     padding-bottom: 40px;
     padding-left: 75px;
+    margin-left: 40px;
 }
 
 .sidenav i {
@@ -260,7 +261,7 @@ i {
 
 .finish {
     padding-top: 70px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .h1-content {
@@ -510,7 +511,7 @@ i {
 
 .content-order a {
     text-decoration: none;
-    color: inherit;
+    /* color: inherit; */
 }
 
 .card-pemesan:hover {
