@@ -13,19 +13,19 @@ class KerjakanController extends Controller
 {
     function index($id)
     {
-        $judul = DetailPsikotest::where('id', $id)->first();
+        $order = Transaksi::where('detail_id', $id)->where('status','PAID')->where('user_id',Auth::user()->id)->first();
         $items = Soal::with(['opsi'])->where('detail_id', $id)->get();
         return view('pages.user.user_kerjakan', [
             'items' => $items,
-            'judul' => $judul
+            'order' => $order
         ]);
     }
-
 
     function store(Request $request)
     {
         $questions = $request->input('opsi');
         $detail_id = $request->input('detail_id');
+        $order_id = $request->input('order_id');
         
         foreach ((array)$questions as $key => $value) {
             foreach ((array)$value as $answerKey) {
@@ -33,6 +33,7 @@ class KerjakanController extends Controller
                 $userOption->user_id =Auth::user()->id;
                 $userOption->soal_id = $key;
                 $userOption->opsi_id = $answerKey;
+                $userOption->order_id = $order_id;
                 $userOption->detail_id= $detail_id;
                 $userOption->save();
             }

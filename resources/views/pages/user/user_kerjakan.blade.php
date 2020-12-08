@@ -8,7 +8,7 @@
         </div>
         <div class="waktu-pengerjaan">
             <h3>
-                {{ $judul->judul }}
+                {{ $order->detail_psikotest_judul }}
             </h3>
         </div>
         @if ($errors->any())
@@ -28,6 +28,7 @@
                 <div class="card-soal">
                     <p>{{ $item->soal }}</p>
                     <input type="hidden" name="detail_id" value="{{ $item->detail_id }}">
+                    <input type="hidden" name="order_id" value="{{ $order->id }}">
                     <input type="hidden" name="soal_id[]" value="{{ $item->id }}">
                     @foreach ($item->opsi as $opsi)
                         <div class="pt-2">
