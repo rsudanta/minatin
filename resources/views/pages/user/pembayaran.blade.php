@@ -96,9 +96,10 @@ Pembayaran
                 <input type="file" name="buktiBayar" class="form-control" id="buktiBayar" value="" aria-describedby="Bukti Pembayaran">
             </div>
             <div class="mt-4">
-                <button type="submit" class="btn btn-editprofileuser">
+              <a href="{{ route('user_order', Auth::user()->id) }}" class="btn btn-submit">Submit</a>
+                {{-- <button type="submit" class="btn btn-editprofileuser">
                     <p>Submit</p>
-                </button>
+                </button> --}}
             </div>
          </div>
      </div>
