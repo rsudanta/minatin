@@ -61,6 +61,7 @@
                                                 <th scope="col">Nama</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Status</th>
+                                                <th scope="col">Bukti Pembayaran</th>
                                                 <th scope="col">Edit</th>
                                             </tr>
                                         </thead>
@@ -72,6 +73,8 @@
                                                 <td>{{ $item->user->email }}</td>
                                                 <td>
                                                     {{ $item->status }}
+                                                </td>
+                                                <td><a href="{{ route('admin.download',$item->id) }}">{{ $item->bukti }}</a></td>
                                                 <td>
                                                     <a href="{{ route('admin.order.show', $item->id) }}"
                                                         class="btn btn-primary" type="submit"><i class="fa fa-edit"></i></a>

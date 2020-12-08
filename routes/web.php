@@ -103,6 +103,8 @@ Route::prefix('admin')
             ->name('admin.user.show');
         Route::post('/user/update/{id}', 'App\Http\Controllers\AdminUserController@update')
             ->name('admin.user.update');
+        Route::get('/user/download/{id}', 'App\Http\Controllers\OrderController@download')
+            ->name('admin.download');
     });
 Auth::routes(['verify' => true]);
 Blade::directive('money', function ($expression) {

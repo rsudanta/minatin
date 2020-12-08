@@ -6,6 +6,7 @@ use App\Models\Transaksi;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Response;
 
 
 class OrderController extends Controller
@@ -27,7 +28,7 @@ class OrderController extends Controller
 
     public function show($id)
     {
-        $items = Transaksi::find($id);
+        $items = Transaksi::where('id', $id)->first();
         return view('pages.user.pembayaran', [
             'items' => $items
         ]);
@@ -50,8 +51,18 @@ class OrderController extends Controller
         $data = [
             'bukti' => $nama_file,
         ];
-        $item = Transaksi::findOrFail($id);
-        $item->update($data);
+
+        Transaksi::findOrFail($id)->update($data);
+
         return redirect()->route('user_order', Auth::user()->id);
+    }
+
+
+    public function download($id)
+    {
+        $items = Transaksi::where('id', $id)->value('bukti');
+        $file = public_path() . "/storage/bukti/" . $items;
+        $headers = array('Content-Type: image/jpg',);
+        return Response::download($file, $items, $headers);
     }
 }
