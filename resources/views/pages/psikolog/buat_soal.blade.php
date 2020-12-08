@@ -11,9 +11,9 @@
             <h1 class="title">
                 Psikotest
             </h1>
-            <p> <a href="#">
+            <p> <a href="{{ route('psikolog.psikotest',Auth::user()->id) }}">
                     Psikotest
-                </a> > <a href="" class="bread-nav">Buat Psikotest</a>
+                </a> > <a href="" class="bread-nav">Buat Soal</a>
             </p>
         </div>
         <!--End Header-->

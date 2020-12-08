@@ -43,23 +43,36 @@
                                             <th scope="col">Soal</th>
                                             <th scope="col">Opsi</th>
                                             <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse ($items as $item)
+                                        @foreach ($items as $item)
                                             <tr>
                                                 <th scope="row">{{ $item->soal->id }}</th>
                                                 <td>{{ $item->soal->soal }}</td>
                                                 <td>{{ $item->opsi }}</td>
                                                 <td>
-                                                    <button class="btn btn-primary" type="submit">Edit</button>
+                                                    <a class="btn btn-primary"
+                                                        href="{{ route('psikolog.psikotest.soal.edit', $item->soal->id) }}"
+                                                        type="submit">Edit Soal</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-primary"
+                                                        href="{{ route('psikolog.psikotest.opsi.edit', $item->id) }}"
+                                                        type="submit">Edit Opsi</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-primary"
+                                                        href="{{ route('psikolog.psikotest.soal.destroy', $item->soal->id) }}"
+                                                        type="submit">Hapus Soal</a>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    @empty
-                                        <p>Tidak ada data soal</p>
-                                        </form>
-                                    @endforelse
+                                    </tbody>
+                                    </form>
+                                    @endforeach
                                 </table>
 
                             </div>

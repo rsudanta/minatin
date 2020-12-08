@@ -59,6 +59,16 @@ Route::prefix('psikolog')
             ->name('psikolog.psikotest.create');
         Route::get('/lihat-soal/{id}', 'App\Http\Controllers\SoalController@show')
             ->name('psikolog.psikotest.soal.show');
+        Route::get('/lihat-soal/soal/{id}', 'App\Http\Controllers\SoalController@edit_soal')
+            ->name('psikolog.psikotest.soal.edit');
+        Route::get('/lihat-soal/opsi/{id}', 'App\Http\Controllers\SoalController@edit_opsi')
+            ->name('psikolog.psikotest.opsi.edit');
+        Route::post('/lihat-soal/soal/update/{id}', 'App\Http\Controllers\SoalController@update_soal')
+            ->name('psikolog.psikotest.soal.update');
+        Route::post('/lihat-soal/opsi/update/{id}', 'App\Http\Controllers\SoalController@update_opsi')
+            ->name('psikolog.psikotest.opsi.update');
+        Route::get('/lihat-soal/soal/destroy/{id}', 'App\Http\Controllers\SoalController@destroy_soal')
+            ->name('psikolog.psikotest.soal.destroy');
         Route::get('/buat-soal', 'App\Http\Controllers\SoalController@index')
             ->name('psikolog.psikotest.soal');
         Route::post('/buat-opsi/store', 'App\Http\Controllers\SoalController@store')
