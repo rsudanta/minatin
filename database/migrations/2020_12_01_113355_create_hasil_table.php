@@ -20,6 +20,7 @@ class CreateHasilTable extends Migration
             $table->integer('user_id');
             $table->integer('soal_id');
             $table->integer('opsi_id');
+            $table->integer('order_id');
             $table->string('jawaban')->nullable();
         });
     }

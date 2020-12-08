@@ -15,8 +15,8 @@ class HasilPsikotestController extends Controller
 {
     function index($id)
     {
-        $order = Transaksi::where('status', 'FINISHED')->where('user_id', $id)->first();
-        $items = Hasil::with(['user', 'soal', 'detail_psikotest'])->where('user_id', $id)->get();
+        $order = Transaksi::where('status', 'FINISHED')->where('id', $id)->first();
+        $items = Hasil::with(['user', 'soal', 'detail_psikotest'])->where('order_id', $id)->get();
         return view('pages.psikolog.hasil', [
             'items' => $items,
             'order' => $order

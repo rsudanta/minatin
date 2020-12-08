@@ -36,7 +36,7 @@ Route::prefix('user')
             ->name('user.hasil');
         Route::get('/order/hasil/download/{id}', 'App\Http\Controllers\HasilPsikotestController@download')
             ->name('user.hasil.download');
-        Route::resource('users', 'App\Http\Controllers\ProfileController::class');
+        Route::resource('users', App\Http\Controllers\ProfileController::class);
     });
 
 Route::get('/', 'App\Http\Controllers\LandingPageController@index')->name('home');

@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-4 mr-4">
                     @forelse ($finish as $item)
-                        <a href="{{ route('psikolog.hasil', $item->user->id) }}">
+                        <a href="{{ route('psikolog.hasil', $item->id) }}">
                             <div class="card-pemesan text-center ">
                                 <img src="/storage/avatars/{{ $item->user->avatar }}" alt="" class="rounded-circle img-pemesan">
                                 <div class="nama-pemesan">{{ $item->user->name }}</div>

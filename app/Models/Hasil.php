@@ -27,4 +27,7 @@ class Hasil extends Model
     public function opsi(){
         return $this->belongsTo(Opsi::class,'opsi_id','id');
     }
+    public function order(){
+        return $this->belongsTo(Transaksi::class,'order_id','id');
+    }
 }
