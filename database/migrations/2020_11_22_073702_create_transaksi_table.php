@@ -19,6 +19,7 @@ class CreateTransaksiTable extends Migration
             $table->integer('detail_id');
             $table->integer('user_id');
             $table->string('status');
+            $table->string('bukti')->default('none.jpg');
         });
     }
 

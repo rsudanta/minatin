@@ -26,12 +26,14 @@ Route::prefix('user')
             ->name('detail.psikotest');
         Route::post('/dashboard/checkout/{id}', 'App\Http\Controllers\DetailPsikotestController@success')
             ->name('sukses');
+        Route::post('/checkout/upload/{id}', 'App\Http\Controllers\OrderController@bukti')
+            ->name('upload.bukti');
+        Route::get('/checkout/{id}', 'App\Http\Controllers\OrderController@show')
+            ->name('bukti');
         Route::get('/kerjakan/{id}', 'App\Http\Controllers\KerjakanController@index')
             ->name('user.kerjakan');
         Route::post('/kerjakan/store', 'App\Http\Controllers\KerjakanController@store')
             ->name('user.kerjakan.store');
-        Route::get('/pembayaran', 'App\Http\Controllers\TestController@index')
-            ->name('pembayaran');
         Route::get('/order/hasil/{id}', 'App\Http\Controllers\HasilPsikotestController@hasil_user')
             ->name('user.hasil');
         Route::get('/order/hasil/download/{id}', 'App\Http\Controllers\HasilPsikotestController@download')

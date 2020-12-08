@@ -38,7 +38,7 @@ Order
                                 </div>
                             </div>
                             <div class="parent">
-                                <a href="{{ route('pembayaran') }}" class="join-card btn btn-card">
+                                <a href="{{ route('bukti',$item->id) }}" class="join-card btn btn-card">
                                     <p>Bayar</p>
                                 </a>
                             </div>
