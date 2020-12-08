@@ -95,14 +95,14 @@ Order
                                     </div>
                                 </div>
                             </div>
-  
+
                         </div>
                     @empty
                     </div>
                     <p class="info">Tidak ada psikotes yang sudah selesai</p>
                 @endforelse
             </div>
-            <div class="finish">
+            <div class="finish mb-5">
                 <h1 class="h1-content">SUDAH SELESAI</h1>
                 <div class="row">
                     @forelse ($check as $item)

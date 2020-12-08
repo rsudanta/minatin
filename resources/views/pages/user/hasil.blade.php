@@ -1,7 +1,7 @@
-@extends('layouts.psikolog.app_psikolog')
+@extends('layouts.user.app')
 
 @section('title')
-    Input Hasil
+Hasil Psikotest
 @endsection
 
 @section('content')
@@ -29,35 +29,41 @@
                     <div class="order-id">Order ID #{{ $items->order_id }}</div>
                 </div>
             </div>
-            <div class="container-input-hasil">
-                <table class="table-hasil">
-                    <tr>
-                        <td>Rekomendasi Jurusan 1</td>
-                        <td>:</td>
-                        <td></td>
-                        <td>{{ $items->jurusan1 }}</td>
-                    </tr>
-                    <tr>
-                        <td>Rekomendasi Jurusan 2</td>
-                        <td>:</td>
-                        <td></td>
-                        <td>{{ $items->jurusan2 }}</td>
-                    </tr>
-                    <tr>
-                        <td>Rekomendasi Jurusan 3</td>
-                        <td>:</td>
-                        <td></td>
-                        <td>{{ $items->jurusan3 }}</td>
-                    </tr>
-                    <tr>
-                        <td>Alasan</td>
-                        <td>:</td>
-                        <td></td>
-                        <td>{{ $items->alasan }}</td>
-                    </tr>
-                </table>
+            <div class="container-detail-pemesan">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="data-detail-pemesan-kiri">Rekomendasi Jurusan 1</div>
+                    </div>
+                    <div class="col-8">
+                        <div class="data-detail-pemesan-kanan">{{ $items->jurusan1}}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="data-detail-pemesan-kiri">Rekomendasi Jurusan 2</div>
+                    </div>
+                    <div class="col-8">
+                        <div class="data-detail-pemesan-kanan">{{ $items->jurusan2}}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="data-detail-pemesan-kiri">Rekomendasi Jurusan 3</div>
+                    </div>
+                    <div class="col-8">
+                        <div class="data-detail-pemesan-kanan">{{ $items->jurusan3}}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="data-detail-pemesan-kiri">Alasan</div>
+                    </div>
+                    <div class="col-8">
+                        <div class="data-detail-pemesan-kanan">{{ $items->alasan}}</div>
+                    </div>
+                </div>
                 <a href="{{ route('user.hasil.download',$items->order_id) }}" type="submit" class="btn btn-periksa" href="">Download Hasil</a>
-            </div>
+             </div>
         </div>
     </div>
 @endsection

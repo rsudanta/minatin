@@ -46,8 +46,8 @@ class ActiveBtn
             case(strstr($route, '/psikotest')) :
                 $active['psikotest'] = 'active';
                 break;
-            case(strstr($route, '/user')) :
-                $active['admin-user'] = 'active';
+            case(strstr($route, '/profile')) :
+                $active['profile'] = 'active';
                 break;
             case(strstr($route, '/order')) :
                 $active['admin-order'] = 'active';
