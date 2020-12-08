@@ -30,21 +30,21 @@
             <p>Belum ada order</p>
             @endforelse
         </div>
-    </div>
-    <div class="mb-4">
-        <h1 class="h1-content">BELUM DIKERJAKAN</h1>
-        <div class="row">
-            <div class="col-4 mr-4">
-                @forelse ($paid as $item)
-                <div class="card-pemesan-paid text-center ">
-                    <img src="/storage/avatars/{{ $item->user->avatar }}" alt="" class="rounded-circle img-pemesan">
-                    <div class="nama-pemesan">{{ $item->user->name }}</div>
-                    <div class="order-id">Order ID #{{ $item->id }}</div>
+        <div class="content-paid">
+            <h1 class="h1-content">BELUM DIKERJAKAN</h1>
+            <div class="row">
+                <div class="col-4 mr-4">
+                    @forelse ($paid as $item)
+                    <div class="card-pemesan-paid text-center ">
+                        <img src="/storage/avatars/{{ $item->user->avatar }}" alt="" class="rounded-circle img-pemesan">
+                        <div class="nama-pemesan">{{ $item->user->name }}</div>
+                        <div class="order-id">Order ID #{{ $item->id }}</div>
+                    </div>
                 </div>
+                @empty
+                <p>Belum ada order</p>
+                @endforelse
             </div>
-            @empty
-            <p>Belum ada order</p>
-            @endforelse
         </div>
     </div>
 </div>
