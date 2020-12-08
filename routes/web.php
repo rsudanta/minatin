@@ -81,6 +81,8 @@ Route::prefix('psikolog')
             ->name('psikolog.input_hasil');
         Route::post('/order/hasil/input-hasil/store', 'App\Http\Controllers\HasilPsikotestController@store')
             ->name('psikolog.input_hasil.store');
+        Route::get('/order/hasil/hasil/get/{id}', 'App\Http\Controllers\HasilPsikotestController@get_pdf')
+            ->name('psikolog.hasil.get');
     });
 Auth::routes(['verify' => true]);
 

@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Hasil;
 use App\Models\Jurusan;
 use App\Models\Transaksi;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 use Response;
 
 class HasilPsikotestController extends Controller
@@ -59,24 +61,37 @@ class HasilPsikotestController extends Controller
 
         Jurusan::create($data);
 
-        $transaction= Transaksi::where('id', $request->order_id)->first();
+        $transaction = Transaksi::where('id', $request->order_id)->first();
         $transaction->status = 'CHECKED';
         $transaction->save();
 
         return redirect()->route('psikolog.order', Auth::user()->id);
     }
 
-    public function hasil_user($id){
-        $items=Jurusan::where('order_id',$id)->first();
+    public function hasil_user($id)
+    {
+        $items = Jurusan::where('order_id', $id)->first();
         return view('pages.user.hasil', [
             'items' => $items,
         ]);
     }
 
-    public function download($id){
-        $items=Jurusan::where('order_id',$id)->value('hasil');
-        $file = public_path()."/storage/file/" . $items;
+    public function download($id)
+    {
+        $items = Jurusan::where('order_id', $id)->value('hasil');
+        $file = public_path() . "/storage/file/" . $items;
         $headers = array('Content-Type: application/pdf',);
-        return Response::download($file,$items,$headers);
+        return Response::download($file, $items, $headers);
+    }
+
+
+    public function get_pdf($id)
+    {
+        $items = Transaksi::where('status', 'FINISHED')->where('user_id', $id)->first();
+        $hasil = Hasil::with(['user', 'soal', 'detail_psikotest'])->where('user_id', $id)->get();
+        $user = User::where('id', $id)->value('name');
+
+        $pdf = PDF::loadview('hasil_pdf', ['hasil' => $hasil,'items'=>$items]);
+        return $pdf->download(time() . '_' . $user . '.pdf');
     }
 }
