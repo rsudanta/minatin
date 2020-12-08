@@ -87,8 +87,8 @@ class HasilPsikotestController extends Controller
 
     public function get_pdf($id)
     {
-        $items = Transaksi::where('status', 'FINISHED')->where('user_id', $id)->first();
-        $hasil = Hasil::with(['user', 'soal', 'detail_psikotest'])->where('user_id', $id)->get();
+        $hasil = Hasil::where('order_id', $id)->get();
+        $items = Hasil::where('id', $id)->first();
         $user = User::where('id', $id)->value('name');
 
         $pdf = PDF::loadview('hasil_pdf', ['hasil' => $hasil,'items'=>$items]);

@@ -37,7 +37,7 @@
                     </div>
                 @endforeach
                 <a type="submit" class="btn btn-periksa" href="{{ route('psikolog.input_hasil', $order->user->id) }}" >Masukkan Hasil</a>
-                <a type="submit" class="btn btn-periksa" href="{{ route('psikolog.hasil.get', $order->user->id)}}" >Download Hasil</a>
+                <a type="submit" class="btn btn-periksa" href="{{ route('psikolog.hasil.get', $order->id)}}" >Download Hasil</a>
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@
     <center>
         <h3>{{ $items->detail_psikotest->judul }}</h3>
         <h5>Dikerjakan oleh : {{ $items->user->name }}</h5>
-        <h6>Order ID #{{ $items->id }}</h6>
+        <h6>Order ID #{{ $items->order_id }}</h6>
     </center>
 
     <table class='table table-bordered'>

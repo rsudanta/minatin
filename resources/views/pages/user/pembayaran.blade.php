@@ -21,7 +21,7 @@
             <div class="total-harga">
                 <div class="row">
                     <div class="total-psikotest">Total Pembayaran</div>
-                    <div class="total-bayar">@money('150000')</div>
+                    <div class="total-bayar">@money($items->detail_psikotest->harga)</div>
                 </div>
             </div>
             <div class="content-pembayaran">
