@@ -23,23 +23,36 @@
         @endif
         <br>
         <form class="soal" action="{{ route('user.kerjakan.store') }}" method="post">
-            @csrf
-            @foreach ($items as $item)
-                <div class="card-soal">
-                    <p>{{ $item->soal }}</p>
-                    <input type="hidden" name="detail_id" value="{{ $item->detail_id }}">
-                    <input type="hidden" name="order_id" value="{{ $order->id }}">
-                    <input type="hidden" name="soal_id[]" value="{{ $item->id }}">
-                    @foreach ($item->opsi as $opsi)
-                        <div class="pt-2">
-                            <input type="radio" name="opsi[{{ $item->id }}]" value="{{ $opsi->id }}">
-                            {{ $opsi->opsi }}
+                        @csrf
+                        @foreach ($items as $item)
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card border-0 shadow">
+                                    <div class="card-body p-5">
+                                    <div class="table-responsive">
+                                        <table class="table m-0">
+                                            <tr>
+                                            <td scope="row">{{ $item->soal }}</th>
+                                                <input type="hidden" name="detail_id" value="{{ $item->detail_id }}">
+                                                <input type="hidden" name="order_id" value="{{ $order->id }}">
+                                                <input type="hidden" name="soal_id[]" value="{{ $item->id }}">
+                                            </td>
+                                        </table>
+                                    @foreach ($item->opsi as $opsi)
+                                        <div class="pt-2">
+                                        <input type="radio" name="opsi[{{ $item->id }}]" value="{{ $opsi->id }}">
+                                            {{ $opsi->opsi }}
+                                        </div>
+                                        <br><br>
+                                    @endforeach
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    @endforeach
-
-                </div>
-                <br>
-            @endforeach
+                        <br>
+                        @endforeach
+                        <br><br><br>
             <button class="btn btn-submitsoal">
                 <p>Submit</p>
             </button>

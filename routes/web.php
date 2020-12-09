@@ -110,3 +110,7 @@ Auth::routes(['verify' => true]);
 Blade::directive('money', function ($expression) {
     return "Rp <?php echo number_format($expression,0,',','.'); ?>";
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
