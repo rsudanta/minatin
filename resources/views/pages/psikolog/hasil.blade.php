@@ -31,23 +31,10 @@
             </div>
             <div class="container-input-hasil">
                 @foreach ($items as $item)
-                <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card border-0 shadow">
-                                    <div class="card-body p-5">
-                                    <div class="table-responsive">
-                                        <table class="table m-0">
-                                            <tr>
-                                            <td scope="row">{{ $item->soal->soal }}</td>
-                                            </tr>
-                                            <tr class="answer">
-                                                Answer : <span>{{ $item->opsi->opsi }}</span>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                </div>
+                    <div class="soal pt-3">
+                        <p>{{ $item->soal->soal }}</p>
+                        <p class="answer">Answer : <span>{{ $item->opsi->opsi }}</span></p>
+                    </div>
                 @endforeach
                 <a type="submit" class="btn btn-periksa" href="{{ route('psikolog.input_hasil', $order->user->id) }}" >Masukkan Hasil</a>
                 <a type="submit" class="btn btn-periksa" href="{{ route('psikolog.hasil.get', $order->id)}}" >Download Hasil</a>
